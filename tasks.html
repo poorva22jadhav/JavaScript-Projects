@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <title>TasksForDay</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+         <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+         />
+
+
+         <style>
+
+             *{
+                margin:0;
+                padding:0;
+                font-family:cursive;
+           
+              }
+
+             h1{
+                  font-size:35px;}
+
+             #input1{
+                    width:350px;
+                    height:20px;
+                    background:linear-gradient(rgba(150,150,150),rgba(200,200,200));
+                    box-shadow:5px 5px 6px black;
+                    border:none;
+                    padding:3px;
+                    font-size:15px;
+                    font-weight:bold;
+                     }
+
+
+            #submitBtn,#lastBtn{
+                    width:100px;
+                    height:27px;
+                    font-size:15px;
+                    background:linear-gradient(rgba(150,150,150),rgba(200,200,200));
+                    box-shadow:5px 5px 6px black;
+                    border:none;
+                    font-weight:bold;
+                     }
+
+
+
+              .task-container{
+                    width:550px;
+                    height:400px;
+                    background:linear-gradient(rgba(150,150,150),rgba(200,200,200));
+                    box-shadow:8px 8px 7px black;
+                    display:grid;
+                    place-items:center;}
+
+              .taskElement{
+                    display:flex;
+                    width:400px;
+                    height:30px;
+                    color:black;
+                    font-weight:bold;
+                    background:linear-gradient(rgba(150,150,150),rgba(200,200,200));
+                    box-shadow:5px 5px 6px black;
+                    border:none;
+                    margin:15px;
+                    
+                      }
+
+              #lastBtn{
+                    margin:20px;}
+
+               .section{
+                    display:grid;
+                    place-items:center;}
+
+              .button-container{
+                    width:300px;
+                    display:flex;
+                    justify-content:flex-end;}
+
+             .task{
+                    font-size:18px;
+                    margin-left:7px;}
+             
+             .fas{
+                  color:black;
+                  border:none;
+                 
+                 
+                 }
+       
+             .task-form{
+                    margin:0;}
+
+            
+
+               .edit-btn, .delete-btn{
+                      background:transparent;
+                      border:none;
+                      margin:10px;}
+
+
+                .alert-danger{
+                       color:black;
+                       background:linear-gradient(rgba(150,150,150),rgba(200,200,250));}
+
+                .alert-success{
+                      color:black;
+                      background:linear-gradient(rgba(150,150,150),rgba(200,200,250));
+                               }
+
+               #logo{
+                       width:60px;
+                       height:50px;}
+
+              .header{
+                     display:flex;
+                    }
+           
+             .checked{
+                    transform:translate(120px,30px);
+                    font-size:20px;
+                    font-weight:bold;
+                    display:none;}
+                 
+                   
+                   
+
+             #winky-face{
+                     transform:translateY(10px);}
+            
+
+          .alert{
+                width:400px;}
+            
+
+         </style>
+
+
+    </head>
+          
+    <body>
+            <section class="section">
+                   
+                   <div class="task-container">
+                       <p class="alert"></p>
+                       <div class="header">
+                             
+                            <h1>Tasks For Day</h1>
+                            <img src="https://cdn.onlinewebfonts.com/svg/img_546505.png" id="logo">
+                      </div>
+                            <form class="task-form">
+                               
+                                
+                               <input type="text" id="input1" placeholder="eg.Hiking">
+                               <button id="submitBtn">Submit</button>
+                       
+                            </form>
+              
+        <div class="t-container">
+                   <div class="tasks">
+                        
+                    </div>      
+
+                 <button class="show-container" id="lastBtn">Clear Tasks</button>
+
+             <div class="checked">
+                 <input type="checkbox" id="check" value="Completed" >
+               <lable for="check" >All Tasks Completed</lable>
+               <img src="https://www.shareicon.net/data/2015/08/22/89307_face_512x512.png" id="winky-face" width="40px" height="40px">
+  </div>
+         
+         </div>
+                   
+                   </div>
+
+                      
+           </section>
+
+
+         <script>
+            
+              const alert = document.querySelector(".alert");
+              const task = document.querySelector("#input1");
+              const form= document.querySelector(".task-form");
+              const submit= document.getElementById("submitBtn");
+              const tContainer=document.querySelector(".tasks");
+              const tElement=document.querySelector(".taskElement");
+              const clearBtn=document.querySelector(".show-container");
+              const container=document.querySelector(".t-container");
+
+
+            let editElement;
+            let editFlag = false;
+            let editID="";
+           
+           
+
+             form.addEventListener("submit", addItem);
+
+             clearBtn.addEventListener("click",clearItems);
+              
+             
+
+             function addItem(e){
+                              e.preventDefault();
+                              const value=task.value;
+                              const id= new Date().getTime().toString();
+                              
+                              // i.e value exists and editing flag is false
+
+                              if(value && !editFlag){
+                              
+                                      const element = document.createElement("article");
+                                      element.classList.add("taskElement");
+
+                                      const attr=document.createAttribute("data-id");
+                                      attr.value=id;
+ 
+                                      element.setAttributeNode(attr);
+
+                                      element.innerHTML=` <p class="task">${value}</p>
+                                                           <div class="button-container">
+                                      <button id="btn2"  class="edit-btn"><i class='fas fa-pen-nib' style='font-size:15px'></i></button>
+                                      <button id="btn1"  class="delete-btn"><i class='fas fa-trash' style='font-size:15px'></i></button>
+
+                              </div>`;
+
+
+                                         const DeleteBtn=element.querySelector(".delete-btn");
+                                         const EditItem=element.querySelector(".edit-btn");
+
+                                         DeleteBtn.addEventListener("click", deleteButton);
+                                         EditItem.addEventListener("click", editItem);
+
+                                      
+                                         
+                                       tContainer.appendChild(element); 
+
+                                       displayAlert("Successfully Added!","success");
+
+
+
+                                      addToLocalStorage(id,value);
+                                      setBackToDefault();                                                                  
+                                              }
+
+                                    
+                                       
+
+                            else  if(value!=="" && editFlag== true ){                           
+                                             editElement.innerHTML= value;
+                                             displayAlert("value changed","success");
+                                             editLocalStorage(editID,value);
+
+                                             setBackToDefault();
+                                                                  }
+                              
+                               
+                               else{
+                                    displayAlert("Please Enter value","danger");
+                                  }
+                        
+                                                                    
+                                 
+                                      }
+
+
+                        
+
+
+                             
+
+                              function clearItems(){
+                                     const items= document.querySelectorAll(".taskElement");
+                                            if(items.length > 0){
+                                                        items.forEach(function (item){
+
+                                                           tContainer.removeChild(item);
+
+                                                  });
+
+                                                      }
+
+                                          displayAlert("empty list","danger");
+                                          setBackToDefault();
+                                              
+                                            }
+                                      
+
+
+
+                                 function displayAlert(text,action){
+                                             alert.textContent=text;
+                                              alert.classList.add(`alert-${action}`);
+
+                                             
+
+                                                 setTimeout(function(){
+                                                 alert.textContent="";
+                                                 alert.classList.remove(`alert-${action}`);     
+
+
+                                                 },1000);
+
+                                           } 
+
+
+
+                            function setBackToDefault(){
+                                     task.value="";
+                                     editFlag = false;
+                                     editId="";
+                                     submit.textContent="submit";}
+
+
+                            function deleteButton(event){
+                                      const element=event.currentTarget.parentElement.parentElement;
+                                      tContainer.removeChild(element);
+                                      displayAlert("item removed","danger");
+
+                                        removeFromLocalStorage(id);
+
+                                       
+                                                   }
+
+                             function editItem(e){
+                                         const element = e.currentTarget.parentElement.parentElement;
+                                            
+                                          editElement = e.currentTarget.parentElement.previousElementSibling;
+                                         
+                                         task.value= editElement.innerHTML;
+
+                                          editFlag=true;
+                                              editID = element.dataset.id;
+                                              submit.textContent = "edit";
+                                                
+                                              }
+
+
+
+                            function addToLocalStorage(id,value){
+                                      const taskitem = {id:id,value:value};
+                                      
+                                      let items = getLocalStorage();
+
+                                     
+
+
+                                      items.push(taskitem);
+                                      localStorage.setItem('list',JSON.stringify(items));
+                                                                 }
+
+
+                            function removeFromLocalStorage(id){
+                                       let items = getLocalStorage();
+
+                                       items = items.filter(function(item){
+                                             if(item.id != id){
+                                               
+                                                return item;
+                                              
+                                            }
+
+                                        });
+
+                                          localStorage.setItem('list',JSON.stringify(items));
+
+                      }
+
+                             
+                            function editLocalStorage(id,value){}
+
+                           function getLocalStorage(){
+                                     return  localStorage.getItem("list")?JSON.parse(localStorage.getItem('list')):[];
+                                    
+                                    
+
+                            }      
+
+
+                         
+                          
+          </script>
+
+
+   </body>
+
+
+</html>

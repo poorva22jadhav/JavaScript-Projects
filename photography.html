@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <title>Transition Page</title>
+       <meta charset="utf-8">
+       <style>
+
+        .container{
+                 background:gray;
+                 display:flex;
+                 justify-content:space-around;
+                 align-items:center;
+                 
+                 
+                 }
+           
+       .image{
+             width:80%;
+             height:500px;
+             animation:photo 2s ease ;
+             margin-top:30px;
+             margin-bottom:30px;
+             border-radius:20px;
+             }
+
+
+         text{
+              font-family:cursive;
+              transform:translateY(10px);
+             
+               }
+
+           h1,p{
+                  animation:yourname 2s ease-in-out forwards;
+                  }
+
+
+                 
+        
+
+
+
+
+           @keyframes yourname{
+                 0%{
+                      transform:translateY(-500px);
+                   }
+                 100%{
+                       transform:translateY(0px);
+                    }
+
+                }
+
+
+
+          @keyframes photo{
+               0%{
+                      transform:translateX(800px);
+                    }
+
+                30%{
+                       transform:translateX(400px);
+                   }
+
+
+                
+          
+
+               100%{
+                    transform:translateX(0px);
+                 }
+              }
+
+           </style>
+
+  </head>
+   <body>
+        <main>
+             <div class="container">
+
+                 
+
+                           <div class="image-element">
+                                <img src="https://images.pexels.com/photos/4625977/pexels-photo-4625977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image-error" class="image">
+                           </div>
+                        <div class="text">
+                         <h1> Photography is where reality lies</h1>
+                          <p>You don't make a photograph just with a camera.<br> You bring to the act of photography all the pictures you have seen, <br>the books you have read, <br>the music you have heard,<br> the people you have loved</p>
+                        </div>
+
+
+
+                  
+
+
+
+            </div>
+
+       </main>
+
+   </body>
+
+</html>

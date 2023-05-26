@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <title>Counter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <style>
+
+     body{
+          display:grid;
+          place-items:center;
+          grid-gap:10px;}
+
+
+    .container{
+
+             display:grid;
+             place-items:center;
+             width:400px;
+             height:200px;
+             box-shadow:7px 8px 7px black;
+             } 
+
+
+  .value{
+        font-size:40px;
+        font-weight:bold;
+        }
+
+ h2{
+       font-size:30px;
+       }
+
+.btn{
+      font-size:20px;
+      border:2px solid black;
+      font-weight:bold;}
+
+
+.btn:hover{
+      background:black;
+      color:white;}
+
+
+
+
+  </style>
+
+  
+ <body>
+
+
+      <div class="container first">
+          <h2>First Counter</h2>
+          <span class="value">0</span>
+          <div class="btn-container">
+             <button class="btn decrease" type="button">decrease</button>
+             <button class="btn increase" type="button">increase</button>
+             <button class="btn reset" type="button">reset</button>
+          </div>
+
+      </div>
+
+  <div class="container second">
+          <h2>Second Counter</h2>
+          <span class="value">0</span>
+          <div class="btn-container">
+             <button class="btn decrease" type="button">decrease</button>
+             <button class="btn increase" type="button">increase</button>
+             <button class="btn reset" type="button">reset</button>
+          </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+     <script>
+
+
+        function counter(element, value){
+                    this.counter=element;
+                    this.value=value;
+                    this.resetBtn=element.querySelector(".reset");
+                    this.incrBtn=element.querySelector(".increase");
+                    this.decrBtn=element.querySelector(".decrease");
+                    this.valueDOM=element.querySelector(".value");
+                    this.valueDOM.textContent=this.value;
+
+                   // binding
+
+                   this.increase = this.increase.bind(this);
+                    this.decrease = this.decrease.bind(this);
+                    this.reset = this.reset.bind(this);
+
+                    this.incrBtn.addEventListener('click',this.increase);
+                 this.decrBtn.addEventListener('click',this.decrease);
+              this.resetBtn.addEventListener('click',this.reset);
+                   
+                                  }
+
+
+                  
+
+
+                counter.prototype.increase=function(){
+               console.log(this);
+               this.value++;
+               this.valueDOM.textContent=this.value;};
+
+
+             counter.prototype.decrease=function(){
+              
+               this.value--;
+               this.valueDOM.textContent=this.value;};
+
+
+              counter.prototype.reset=function(){
+               
+               this.value=0;
+               this.valueDOM.textContent=this.value;};
+
+       const firstCounter=new counter( getElement('.first'),100);
+
+       const secondCounter=new counter( getElement('.second'),200);
+
+      
+
+         
+
+
+      counter.prototype.increase=function(){
+               console.log(this);
+               this.value++;
+               this.valueDOM.textContent=this.value;};
+
+
+       function getElement(selection){
+
+                    const element = document.querySelector(selection);
+                    
+                           if(element){
+                                      return element;
+                                      }
+                           throw new Error(
+                                      `please check ${selection}`);
+                                              }
+
+        getElement('.first');
+                                 
+     </script>
+
+
+
+</body>
+
+</html>

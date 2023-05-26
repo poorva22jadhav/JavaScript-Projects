@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <title></title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+
+             h1{
+                  font-family:cursive;
+                  text-align:center;}
+
+
+             .output-div{
+
+                   width:500px;
+                   height:150px;
+                   border:2px solid black;
+                   margin-bottom:10px;
+                    background:linear-gradient(#869F98,black);
+                   border-radius:20px;
+                  transform:translateX(44px);}
+
+              #display_result{
+                     color:white;
+                      text-align:center;
+                     transform:translateY(10px);
+                     font-size:50px;}
+
+             .buttons{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows:40px 40px;
+                   
+                    margin:20px;
+                    grid-gap:20px;
+                   transform:translateX(-80px);
+                   
+                     }
+
+             .Button {
+                   font-size:20px;
+                   border:2px solid black;
+                   font-family:cursive;
+                   font-weight:bold;
+                   pointer:cursor;
+                   background:linear-gradient(#869F98,black);}
+
+              .calculator{
+                   border:2px solid black;
+                   height:500px;
+                   width:600px;
+                   padding:30px;
+                   margin:auto;
+                   background:linear-gradient(#869F98,black);
+                   border-radius:20px;}
+
+               .lower-content{
+                      transform:translate(100px,50px);
+                      }
+
+                input{
+                     font-size:20px;
+                   border:2px solid black;
+                   font-family:cursive;
+                   font-weight:bold; 
+                   width:200px;
+                    background:linear-gradient(#869F98,black);} 
+
+                Button:hover{
+                      background:linear-gradient(#33363D,black);
+                      color:white;} 
+
+
+                 @media only screen (max-width:300px){
+                           .calculator{
+                                    width:100%;
+                                    }
+
+                         
+
+              
+                           }
+
+
+
+
+
+
+
+
+            </style>
+  </head>
+       <body>
+          <main>
+
+              <h1>BASIC CALCULATOR</h1>
+               <div class="container">
+                   <div class="calculator">
+                          <div class="output-div">
+                               <h2 id="display_result">00</h2>
+                           </div>
+                                   <div class="lower-content">
+                       <input type="number" value="0" id="num1">
+                       <input type="number" value="0" id="num2">
+
+
+                           <div class="buttons">
+                       <button id="add" class="Button">Add</button>
+                       <button id="multiply" class="Button">Multiply</button>
+                       <button id="division" class="Button">Division</button>
+                       <button id="subtraction" class="Button">Subtraction</button>
+                       <button id="square" class="Button">X^2</button>
+                       <button id="square-root" class="Button">√X</button>
+                        <button id="remainder" class="Button">%</button>
+                         <button id="All-Clear" class="Button">AC</button>
+
+                       
+                                   </div>
+ 
+                            </div>
+
+
+
+
+                 </div>
+             </div>
+
+
+
+
+        </main>
+
+          <script>
+                       let Num1=document.querySelector("#num1");                              //Q1 why we need parseInt()
+                       let Num2=document.querySelector("#num2");                              //Q2 num_1 num_2 scope
+                       let add=document.querySelector("#add");
+                       let multiply=document.querySelector("#multiply");
+                       let division=document.querySelector("#division");
+                       let subtraction=document.querySelector("#subtraction");
+                       let display_result=document.querySelector("#display_result");
+                       let AllClear=document.querySelector("#All-Clear");
+                       let Square=document.querySelector("#square");
+                       let squareRoot=document.querySelector("#square-root");
+                       let Remainder=document.querySelector("#remainder")
+
+                       add.addEventListener("click",function(){
+                                 let num_1 = parseInt(Num1.value);
+                                  let num_2 = parseInt(Num2.value);
+
+                                display_result.innerHTML=(addTwoNumbers(num_1,num_2));                           
+ 
+                                                 })
+
+
+                        multiply.addEventListener("click",function(){
+                                let num_1 = parseInt(Num1.value);
+                                 let num_2 = parseInt(Num2.value);
+
+                                display_result.innerHTML=(multTwoNumbers(num_1,num_2));                           
+ 
+                                                 })
+
+                        division.addEventListener("click",function(){
+                                let num_1 = parseInt(Num1.value);
+                                let num_2 = parseInt(Num2.value);
+
+                                display_result.innerHTML=(divTwoNumbers(num_1,num_2)); 
+
+                                 if(z.toString().indexOf('.')!==-1){
+                                      z=z.toFixed(4);     
+
+                                                }
+
+
+                                                       
+ 
+                                                 })
+
+                        subtraction.addEventListener("click",function(){
+                                let num_1 = parseInt(Num1.value);
+                                 let num_2 = parseInt(Num2.value);
+
+                                display_result.innerHTML=(subTwoNumbers(num_1,num_2));                           
+ 
+                                                 })
+
+                       AllClear.addEventListener("click",function(){
+                                   let num_1 = parseInt(Num1.value); 
+                                   let num_2 = parseInt(Num2.value);
+ 
+                                  
+                                   display_result.innerHTML="00";
+
+                                     Num1.value="0";
+                                     Num2.value="0";
+
+                                                                 })
+
+                      Square.addEventListener("click",function(){
+                                      let num_1 = parseInt(Num1.value); 
+                                       let num_2 = parseInt(Num2.value);
+
+                                          if(Num2.value == "" || num_2 == ""){
+                                            display_result.innerHTML= (squareOfNumber(num_1));
+                                          }
+                                          
+                                          else{
+                                               alert("You should enter value in first input only!");
+                                               }
+
+                                              }) 
+
+              squareRoot.addEventListener("click",function(){
+                                      let num_1 = parseInt(Num1.value); 
+                                       let num_2 = parseInt(Num2.value);
+
+                                          if(num_2=="" || Num2.value == ""){
+ 
+                                            display_result.innerHTML= (squarerootOf(num_1));
+                                          }
+                                          
+                                          else{
+                                               alert("You should enter value in first input only!");
+                                               }
+
+                                              })
+
+
+                 Remainder.addEventListener("click",function(){
+                                let num_1 = parseInt(Num1.value);
+                                 let num_2 = parseInt(Num2.value);
+
+                                display_result.innerHTML=(remainderOfNumber(num_1,num_2));                           
+ 
+                                                 }) 
+
+
+
+
+
+
+                     function addTwoNumbers(a,b){
+                              return a+b;
+
+                              }   
+
+                      function subTwoNumbers(a,b){
+                              return a-b
+                              }   
+
+
+
+                      function multTwoNumbers(a,b){
+                             return a*b;
+                              }   
+
+
+                       function divTwoNumbers(a,b){
+                            let z= a/b;
+                            return z;
+                              }
+  
+                        function squareOfNumber(x){
+                           return x*x;
+                               }
+                   
+                       function squarerootOf(x){
+                            let a= Math.sqrt(x);
+                            return a;
+                          }
+
+                      function remainderOfNumber(a,b){
+                             return a%b;
+                              }
+
+                      
+                
+
+
+                               
+
+
+
+                  
+
+                         
+
+
+
+
+         </script>
+      </body>
+
+
+</html>

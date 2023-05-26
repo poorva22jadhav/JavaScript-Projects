@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Concert</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+
+		<style>
+
+                *{
+                  margin:0;
+                  padding:0;}
+
+		
+                
+              #home{
+                     background-image:url("https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");   
+                     width:100%;
+                     height:100vh;
+                                 }
+
+                h1{
+                     font-size:50px;
+                     color:black;
+                     font-family:georgia;
+                     text-align:center;
+                     position:relative;
+                     top:70px;
+                            } 
+
+                 
+                   h2{    font-size:55px;
+                     color:black;
+                     font-family:georgia;
+                     text-align:center;
+                     position:relative;
+                     top:66px;
+                     
+                     }  
+
+                   h4{
+                       font-size:50px;
+                       
+                       color:white;
+                       text-align:center;
+                       position:relative;
+                       top:170px;}  
+             
+
+                .p-text{
+                      font-size:25px;
+                      color:black;
+                     font-family:georgia;
+                     text-align:center;
+                     position:relative;
+                     top:80px;}
+                       
+                    
+                  
+
+                #but{ background:black;
+                           border:none;
+                           color: white;
+                          padding: 15px 32px;
+                           text-align: center;
+                           text-decoration: none;
+                           display: inline-block;
+                            font-size: 16px;
+                            font-family:georgia;
+                           position:relative;
+                            top:100px;
+                            left:600px;
+                            cursor:pointer;}
+                        
+
+		.navbar{
+			display:flex;
+                        flex-direction:row;
+			justify-content:flex-end;
+			align-items:center;
+		        position:fixed;
+                        top:0;
+                        right:0;
+                        background-color:black;
+			opacity:0.7;
+			width:100%;
+                        height:50px;
+                        z-index:1;            }
+
+               .navbar a{
+                        color:white;
+                        text-decoration:none;
+                        padding:30px;
+                        font-size:20px;}
+
+               .navbar a:hover{
+                      
+                        color:red;}
+
+
+              .flex{
+                     display:flex;
+                     flex-direction:row;
+		     justify-content:space-around;
+                     align-items:baseline;
+                     position:relative;
+	             top:100px;
+                      }
+
+
+
+                  .img{
+                    height:300px;
+                    width:250px;
+                    padding:25px;
+                    border-radius:30%;}
+
+
+                 .date{
+                      color:white;
+                      font-size:20px;
+                      position:relative;
+                      top:-250px;
+		      text-align:center;
+                      font-family:cursive;
+                      font-weight:bold;
+                      }
+
+                 .text{
+                      color:black;
+                      font-size:15px;
+                      font-weight:bold;
+                      position:relative;
+                      top:-230px;
+                      text-align:center;
+                      
+                      }
+
+                  
+                 
+                
+                
+                .A{
+                    text-decoration:none; 
+                    color:white;}
+               
+                a:hover{
+                    color:red;}
+            
+                     
+
+
+             
+                 
+
+               #tour{
+			background-image:url("https://images.pexels.com/photos/2952834/pexels-photo-2952834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                        width:100%;
+			height:100vh;
+                        margin:0; 
+                                            }
+
+
+             table{
+                   width:80%;
+                   position:relative;
+                   top:50px;
+                   left:100px;
+                   color:white;
+                   padding:10px;
+                   border-spacing:10px;
+                   font-family:serif;}
+
+             
+
+             th, td{
+                  padding:15px;
+                  border-radius:5px;
+                  border-collapse:collapse;
+                  border-style:solid;
+                  overflow:hidden;
+                  border-right:none;
+                  border-left:none;
+                  border-top:none;
+                  border-color:white;
+                  }
+
+             td{
+                  
+                  font-size:23px;
+                  font-weight:bold;
+                  font-family:cursive;}
+
+             th{
+                  font-size:30px;
+                  font-weight:bold;
+                  font-family:georgia;}
+
+
+
+              #tickets{
+                  background-image:url("https://images.pexels.com/photos/1864642/pexels-photo-1864642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                  width:90%;
+                  height:60vh;
+                  position:relative;
+                  top:10px;
+                  left:90px;
+                  
+                 }
+
+             
+
+              
+
+            .grid-container{
+                     
+                     display:grid;
+                     grid-template-columns:500px 500px;
+                     
+                     align-items:center;
+                     position:relative;
+                     top:-70px;
+                     justify-content:space-evenly;
+                     grid-row-gap:40px;
+                     }
+
+        .grid-container>div{
+                      text-align:center;
+                      padding:40px;
+                      color:white;
+                     background:black;
+                      border-radius:40px;
+                      
+                      }
+                 
+           .img-tick{
+                    width:400px;
+                    height:300px;
+                    border-radius:50%;
+                    padding-top:20px;}
+
+         .button2{
+                    font-size:40px;
+                    background:white;
+                    border-radius:30px;
+                    margin:40px;
+                    text-align:center;
+                    width:50%;
+                    display:inline-block;
+                    cursor: pointer;
+                    color:black;
+                    text-decoration:none;
+                    border:none;}
+
+      
+
+      h5{
+        font-size:30px;}
+
+     
+    
+
+     
+
+             h6{
+                   font-size:40px;
+                   text-align:center;
+                    color:black;}
+
+           .merch-text{
+                 font-size:30px;
+                 text-align:center;
+                 color:black;}
+
+           #merch-img{
+                 width:400px;
+                 height:200px;}
+
+    
+         .text1{
+               float:right;
+               position:relative;
+               top:160px;
+               right:90px;
+               font-size:20px;
+               text-align:center;}
+
+               .button1{
+                      background:black;
+                       color:white;
+                      font-size:30px;
+                      text-decoration:none;
+                      padding:10px;
+                      position:relative;
+                      text-align:center;
+                      top:300px;
+                      float:right;
+                      left:290px;}
+             
+
+               .merch-img2{
+                      width:450px;
+                      height:650px;
+                      float:right;}
+               
+               .merch-img3{
+                      width:480px;
+                       height:600px;
+                      position:relative;
+                      top:530px;
+                      margin-left:20px;}
+
+
+               #contact{
+                         background-image:url("https://images.pexels.com/photos/995301/pexels-photo-995301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                         width:90%;
+                         height:80vh;
+                        
+   
+                      }
+
+                 
+         
+		
+	</style>
+	
+
+	</head>
+	
+	<body>
+		<main>
+			
+                                                                
+
+                       
+
+                           
+
+
+                      <section id="home">
+                                         
+                                        
+
+                                        <div class="navbar">
+					<nav>
+						<a href="#home" class="nav-items">Home</a>
+						<a href="#tour" class="nav-items">Tour</a>
+ 						<a href="#tickets" class="nav-items">Tickets</a>
+						<a href="#store" class="nav-items">Store</a>
+                                                <a href="#" class="nav-items">Contact</a>
+						
+					</nav>
+				        </div>        
+                                         <header>
+                                                  <h1>India's Biggest Festival<br> Now In Your City</h1>
+                                                   <p class ="p-text">Music to ears is like a soul to life. Escape the monotonous life and find pieces of you by attending live music events, festivals</p>
+						   <a class="button" href="https://www.taylorswift.com/" id="but"/ target="_blank">View Our Artist</a>										
+
+					</header>         
+                                                        
+
+                                      <div class="flex">
+                                         <div class="box-1">
+                                               <img src="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic1" class="img">
+                                               <h3 class="date"> 18 Nov 2022 </h3>
+                                              <p class="text"><a href="https://static.toiimg.com/thumb/44855736/National-Centre-for-the-Performing-Arts.jpg?width=650&height=433&resize=true&resizeMode=5" class="A" target="_blank">National center of Arts</a></p>
+                                                             
+					</div>
+					 <div class="box-2">
+						<img src="https://images.pexels.com/photos/1644616/pexels-photo-1644616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic2" class="img">
+                                                <h3 class="date"> 22 Nov 2022 </h3>
+ 						 <p class="text"><a href="https://www.holidify.com/images/cmsuploads/compressed/nh73_20170828184854.jpg" class="A" target="_blank">NH7 Weekender Pune <br> Bangalore, Kolkata <br>and Delhi</a></p>
+                                         </div>
+					 
+
+                                      <div class="box-3">
+                                               <img src="https://images.pexels.com/photos/11963135/pexels-photo-11963135.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic3" class="img">
+						 <h3 class="date"> 26 Nov 2022 </h3>
+                                                 <p class="text"><a href="https://www.holidify.com/images/cmsuploads/compressed/himslead_20170828193806.jpg" class="A" target="_blank">Shiva Squad Festival, Manali</a></p>
+                                     </div>
+					</div>
+                                           </section>
+
+
+
+                                    <section id="tour">
+                               
+                                     <h2>NightFest Tour</h2>
+                                     <table>
+                                        <tr>
+                                            <th>Dates</th>
+                                            <th>Venue</th>
+                                            <th>Artist</th>
+                                       </tr>
+                                           
+                                        <tr class="row">
+                                            <td>18 Nov</td>
+                                            <td>National Center Arts</td>
+				            <td>Namita Choudhary</td>
+					</tr>
+                                           
+                                         <tr class="row">
+                                            <td>19 Nov</td>
+                                            <td>The Humming Tree, Bangalore</td>
+				            <td>Anuv Jain</td>
+					</tr>
+                                              
+                                         <tr class="row">
+                                            <td>20 Nov</td>
+                                            <td>Kitty Su, Delhi</td>
+				            <td>Pratik Kuhad</td>
+					</tr>
+                                             
+                                        <tr class="row">
+                                            <td>21 Nov</td>
+                                            <td>Mehboob Studios, Mumbai</td>
+				            <td>Hasan Raheem</td>
+					</tr>
+                                              
+					<tr class="row">
+                                            <td>22 Nov</td>
+                                            <td>Shisha Jazz Café, Pune</td>
+				            <td>Mitraz</td>
+					</tr>
+                                          
+				        <tr class="row">
+                                            <td>23 Nov</td>
+                                            <td>Hard Rock Café</td>
+				            <td>Anumita Nadesan</td>
+					</tr>
+
+                                           
+                                      
+                                             
+                                        </table>
+                        
+                     </section>
+
+                        
+                     <section id="tickets">
+                            <h4><strong><i>Buy tickets on the following websites<i></strong></h4>   
+                    </section>
+                             <div class="grid-container">
+                              
+                                  <div class="grid-item">
+                                       
+                                       <div class="grid-text">
+                                       <h5><u>Ticket-Winkel</u><br>A secure way to get tickets for amazing concerts in mumbai</h5>
+                                        </div>
+                                       
+                                       <a class="button2" href="https://www.eventticketscenter.com/?ranMID=47694&ranEAID=SGJ7wZ1I0wI&ranSiteID=&utm_source=Rakuten&utm_medium=affiliates&utm_content=Offer+IDs&utm_campaign=creative+IDs+(Dynamic)SGJ7wZ1I0wI-EEo1UpAEV9D9gZ2C5sQKbw"  target="_blank">View Site</a>
+                                      
+                                   </div>
+                                   
+                                   <div class="grid-item">
+                                       
+                                       <div class="grid-text">
+                                       <h5><u>TicketIQ</u><br>A secure way to get tickets for amazing concerts in mumbai</h5>
+                                       </div>
+                                      
+                                       <a class="button2" href="https://www.eventticketscenter.com/?ranMID=47694&ranEAID=SGJ7wZ1I0wI&ranSiteID=&utm_source=Rakuten&utm_medium=affiliates&utm_content=Offer+IDs&utm_campaign=creative+IDs+(Dynamic)SGJ7wZ1I0wI-EEo1UpAEV9D9gZ2C5sQKbw"  target="_blank">View Site</a>
+                                       
+                                   </div>
+
+                                     <div class="grid-item">
+                                        
+                                       <div class="grid-text">
+                                        <h5><u>Ticketek</u><br>A secure way to get tickets for amazing concerts in mumbai</h5>
+                                        </div>
+                                     
+                                        <a class="button2" href="https://www.eventticketscenter.com/?ranMID=47694&ranEAID=SGJ7wZ1I0wI&ranSiteID=&utm_source=Rakuten&utm_medium=affiliates&utm_content=Offer+IDs&utm_campaign=creative+IDs+(Dynamic)SGJ7wZ1I0wI-EEo1UpAEV9D9gZ2C5sQKbw"  target="_blank">View Site</a>
+                                       
+                                   </div>
+
+                                   <div class="grid-item">
+                                        
+                                       <div class="grid-text">
+                                      <h5><u>-Ticket</u><br>A secure way to get tickets for amazing concerts in mumbai</h5>
+                                       </div>
+                                      
+                                      <a class="button2" href="https://www.eventticketscenter.com/?ranMID=47694&ranEAID=SGJ7wZ1I0wI&ranSiteID=&utm_source=Rakuten&utm_medium=affiliates&utm_content=Offer+IDs&utm_campaign=creative+IDs+(Dynamic)SGJ7wZ1I0wI-EEo1UpAEV9D9gZ2C5sQKbw" target="_blank">View Site</a>
+                                       
+                                   </div>
+
+                               </div>
+                                      
+
+
+                               <section id="store">
+                                     
+                               
+                                    
+                               <h6><strong>Merch that fans want to wear</strong></h6>
+                                    <p class="merch-text">Our sweatshirts and tees are retail quality, rivalling designer labels you find on the high street.<br> Smart and stylish, you will wear them with pride.<br> Our experts will help you choose the right gear for the job.</p>
+                                         
+                                      <div>
+                                          <img src="https://th.bing.com/th/id/OIP.ITYRfK3Y7yaOgWub1ZBEhQHaKu?pid=ImgDet&rs=1" class="merch-img" alt="img1-err">
+                                          <p class="text1"><strong style="font-size:40px;">Tshirts</strong><br>Merchstore is the smarter way to monetise your fan base. <br>Start your own influencer clothing line with nothing more than an idea or design.<br>Fair Trade, sustainable, organic cotton, recycled polyester, vegan approved.</p>
+                                           <a class="button1" href="https://kendrickmerchandise.com/collections"  target="_blank">Buy Now</a>	
+
+                                      </div>
+                                      <div>
+                                           <img src="https://i.pinimg.com/originals/d8/e9/8a/d8e98a7fb279775ad59d0b6183905748.png" class="merch-img2" alt="img2-err">
+                                           <p class="text1"><strong style="font-size:40px;">Sweatshirts</strong><br>Merchstore is the smarter way to monetise your fan base. <br>Start your own influencer clothing line with nothing more than an idea or design.<br>Fair Trade, sustainable, organic cotton, recycled polyester, vegan approved.</p>
+                                           <a class="button1" href="https://kendrickmerchandise.com/collections"  target="_blank">Buy Now</a>
+                                     </div> 
+                                    
+                                     <div>
+                                           <img src="https://i.pinimg.com/originals/88/f6/1e/88f61e506ec73a6fb90b4743aee0e0a9.jpg" class="merch-img3" alt="img2-err">
+                                             <p class="text1"><strong style="font-size:40px;">Accessories</strong><br>Merchstore is the smarter way to monetise your fan base. <br>Start your own influencer clothing line with nothing more than an idea or design.<br>Fair Trade, sustainable, organic cotton, recycled polyester, vegan approved.</p>
+                                           <a class="button1" href="https://kendrickmerchandise.com/collections"  target="_blank">Buy Now</a>
+                                     </div> 
+
+                                         </section>
+
+
+
+                                        
+                                            
+
+                                       
+
+
+                                        
+
+                         
+                      
+		</main>
+	</body>
+
+
+
+</html>

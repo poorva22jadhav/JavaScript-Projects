@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+             <title>Registration Form and Form Validation</title>
+             <meta charset="utf-8">
+             <meta link="" rel="stylesheet">
+             <!--https://images.pexels.com/photos/8467429/pexels-photo-8467429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1-->
+
+             <style>
+
+                  *{
+                      box-sizing:border-box;
+                      
+                      }
+                   
+             body{
+                    background:linear-gradient(violet,blue) ;   
+                 }
+
+
+                 form{
+                  margin:20px;
+                  padding:10px;
+                  
+                      }
+
+                .form-ele{
+                     transform:translateX(100px);
+                      font-size:18px;
+                      font-family:cursive;
+                      font-weight:bold;
+                      
+                         }
+
+                    h1{
+                         text-align:center;
+                         font-family:cursive;}
+
+
+                 fieldset{
+                         display:block;
+                         width:40%;
+                         height:115vh;
+                         transform:translateX(400px);
+                         background-image:url("https://images.pexels.com/photos/8467429/pexels-photo-8467429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                         border:2px solid black;
+                         z-index:1;
+                         }
+
+
+                 input,  #select-state{
+                       border:none;
+                       height:4vh;
+                       width:50%;
+                       background:background linear-gradient(violet,blue);
+                       opacity:0.6;
+                       font-size:18px;
+                       border-radius:15px;
+                      padding:15px;
+                     font-weight:600;
+                       color:black;
+                       font-family:cursive;
+                       }
+               #text-area , option{
+                        border:none;
+                       background:background linear-gradient(violet,blue);
+                       opacity:0.6;
+                        border-radius:15px;
+                       padding:10px;
+                         font-weight:600;
+                       color:black;
+                       font-family:cursive;
+                       font-size:18px;
+                        }
+
+               lable{
+                      animation: lable-ele 2s ease 1;}
+
+                #submit-button{
+                            color:black;
+                             font-weight:bold;
+                             font-size:15px;
+                             text-transform:uppercase;
+                             padding-bottom:25px;
+                             padding-top:4px;
+                             transition:font-size 0.3s;
+                             margin-bottom:10px;
+                             margin-top:10px;
+                             width:30%;
+                             transform:translateX(100px);}
+
+
+               #submit-button:hover{
+                          color:#00008B;
+                          font-size:18px;}
+
+              @keyframes lable-ele{
+                          0%{
+                               transform:translateX(900px);
+                            }
+                        
+                           100%{
+                               transform:translateX(0px);}
+
+                 }
+                  legend{
+                         font-size:15px;
+                         font-family:cursive;
+                         font-weight:bold;} 
+
+
+                 @media screen only and (max-width:500px){
+                              fieldeset{
+                                        width:20%;}
+                                 }
+
+
+
+ 
+                        
+            </style>
+
+         
+
+             
+             <script>
+                 function validationForm() {
+                        let x = document.forms["FormName"]["user-id"].value;
+                        let a= document.forms["FormName"]["text-area"].value;
+                        let b= document.forms["FormName"]["Password"].value;
+                        let y = document.forms["FormName"]["Phone-No"].value.length;
+                        let z=document.forms["FormName"]["email-address"].value;
+                        let character=x.charAt(0);
+                        let index=z.indexOf("@");
+                        let lastindex=z.lastIndexOf(".");
+
+                         if (x == "" || x.length > 10) {
+                          alert("Enter a valid Username");
+                          return false;
+                                          }
+
+                         if(character!=character.toUpperCase()){
+                              alert("Username should have first word in uppercase");
+                              return false;
+                                      }
+
+
+                        if(index < 1 || (lastindex - index <= 1)){
+                                 alert("Enter a valid Email-Address");
+                                 return false;
+                               }
+
+                          if(y != 10){
+                              alert("please enter valid phone number");
+                               return false;
+                                                  }
+                         
+                         if( a== ""){
+                                alert("Enter your feedback");
+                                 return false;
+                                     } 
+
+                        if(b== "" || b.length >= 11){
+                                     alert("Enter a valid Password ");
+                                      return false;} 
+
+                         
+                         
+                                             return(true);      
+                                                     }
+
+
+
+               
+
+
+
+           </script>
+
+      </head>
+
+
+    <body>
+         <main>
+               <h1>Registration Form</h1>
+                       <form action="action_page.php" name="FormName" onsubmit="return (validationForm())" method="post">
+                       <fieldset>
+                           <legend>Form Validation</legend>
+                           
+                            <div class="form-ele">
+                           <lable for="user">Username</lable> <br>
+                           <input type="text" name="user-id" id="user"/><br><br>
+                           <lable for="email-id">Email</lable><br>
+                           <input type="text" name="email-address" id="email-id" /><br><br>
+                           <lable for="user-password">Password</lable><br>
+                           <input type="password" name="Password" id="user-password" /><br><br>
+                           <lable for="user-no">Phone-no</lable><br>
+                           <input type="tel" name="Phone-No" id="user-no" /><br><br>
+                           <lable for="select-state">Age:</lable><br>
+                           <select id="select-state" required>
+                                <option>Below 18</option>
+                                <option>Above 18</option>
+                                 <option>Above 35</option>
+                                 <option>Above 65</option>
+                           </select><br>
+                           <lable for="text-area">Message</lable><br>
+                           <textarea id="text-area" placeholder="write your message here.." rows="10" cols="30" name="text-area"></textarea><br>
+                           
+                             <div class="submit-but">
+                            <lable for="submit-button"></lable>
+                            <input type="submit" value="submit" id="submit-button"/>
+                              </div>
+                            </div>
+                      </fieldset>
+                            </form>
+
+
+                   </div>
+
+
+         </main>
+           
+
+                       
+
+
+    </body>
+
+      
+      
+
+
+
+</html>

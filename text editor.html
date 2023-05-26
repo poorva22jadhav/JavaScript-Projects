@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <title>Text editor</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+               h1{
+                    text-align:center;
+                    color:magenta;
+                    font-family:cursive;
+                  }
+
+                .btns{
+                    transform:translate(350px,70px);
+                    
+                     }
+
+                 .Button{
+                       margin:10px;
+                       padding:10px;
+                       font-size:20px;
+                       font-family:cursive;
+                       cursor:pointer;
+                       background:linear-gradient(violet,black);
+                       color:white;
+                       border:1px solid black;
+                       }
+
+               #text-area{
+                      transform:translate(350px,100px);
+                      background:linear-gradient(violet,black);
+                      padding:50px;
+                      font-size:20px;
+                     border:4px solid magenta;
+                     border-radius:10px;
+                     
+                          }
+             
+
+
+
+
+         </style>
+     </head>
+
+
+     <body>
+             <h1>TEXT EDITOR</h1>
+
+         <div class="btns">
+
+             <button type="button" id="btn1" class="Button">Bold</button>
+             <button type="button" id="btn2" class="Button">Italic</button>
+             <button type="button" id="btn3" class="Button">Uppercase</button>
+             <button type="button" id="btn4" class="Button">Lowercase</button>
+             <button type="button" id="btn5" class="Button">Capitalize</button>
+             <button type="button" id="btn6" class="Button">Clear text</button>
+             
+
+        <!--    <select class="Button" id="selectButton">
+                 <option id="blueC" class="colors" >Blue</option>
+                 <option id="redC" class="colors">Red</option>
+                 <option id="pinkC" class="colors">Pink</option>
+                 <option id="blackC" class="colors">Black</option>
+                 <option id="grayC" class="colors">Gray</option>
+            </select> -->
+              
+             
+        </div>
+
+
+
+           <textarea id="text-area" cols="60" rows="25" ></textarea>
+
+          
+              
+          <script>
+
+                 let Btn1 = document.querySelector("#btn1");
+                 let Btn2 = document.querySelector("#btn2");
+                 let Btn3 = document.querySelector("#btn3");
+                 let Btn4 = document.querySelector("#btn4");
+                 let Btn5 = document.querySelector("#btn5");
+                 let Btn6 = document.querySelector("#btn6");
+               
+                 
+
+                  
+
+                Btn1.addEventListener("click",function(){
+
+                          text.style["font-weight"]="bold";
+
+                        })
+
+                Btn2.addEventListener("click",function(){
+
+                          text.style["font-style"]="italic";
+
+                        })
+
+               Btn3.addEventListener("click",function(){
+                          
+                          text.style["text-transform"]="uppercase";
+
+                        })
+
+
+
+               Btn4.addEventListener("click",function(){
+
+                          text.style["text-transform"]="lowercase";
+
+                        })
+
+
+              Btn5.addEventListener("click",function(){
+                         
+                            if(text.value.charAt(0)!=text.value.charAt(0).toUpperCase()){
+                                   text.value=text.value.charAt(0).toUpperCase() + text.slice(1);                                                           
+                                       
+                                   } 
+                           
+                        })
+
+
+            Btn6.addEventListener("click",function(){
+                          
+                           text.value = "";
+
+                        })
+
+
+             
+                     
+
+
+
+
+
+         </script>
+
+     </body>
+
+
+
+
+</html>
