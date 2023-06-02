@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+       <head>
+            <title>Artistic Mind</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+             />
+
+              <link
+          rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+
+
+
+         
+
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+            <style>
+              
+             
+          
+     *{
+          margin:0;
+          padding:0;
+       }
+
+
+
+        body{
+               display:grid;
+               grid-template-columns:1fr fr;
+
+                }   
+
+
+
+            .img{
+
+                  width:70%;
+                  height:15rem;
+                  object-fit:cover;
+                  cursor:pointer;
+                  display:none;
+                
+                 }
+
+          .artist-img{
+
+                   width:400px;
+                   height:250px;
+                  object-fit:cover;
+                  cursor:pointer;
+                  display:block;
+                  
+                  border:5px solid #016064;
+                  border-radius:20px;
+                  border-top:none;
+                  border-bottom:none;
+
+                    }
+
+
+            .modal{
+                
+                   position:fixed;
+                   z-index:-1;
+                   right:0;
+                   left:0;
+                   width:100%;
+                   height:100%;
+                   background:linear-gradient(#016064,white);
+                   opacity:0;
+                   min-height:100vh;
+                   overflow:scroll;
+                  }
+
+
+
+               .modal.open{
+                  opacity:1;
+                  z-index:999;
+                      }
+
+
+
+            .close-btn{
+                  font-size:35px;
+                  position:absolute;
+                  right:20px;
+                  top:10px;
+                  background:transparent;
+                  color:black;
+                  border:none;
+                  width:60px;
+                 
+                        }
+
+
+            .close-btn:hover{
+                    background: linear-gradient(#59788E,white);
+                           }
+
+
+
+
+           .prev-btn{
+                  font-size:35px;
+                  position:absolute;
+                  left:20px;
+                  top:17rem;
+                  background:transparent;
+                  color:#016064;
+                  border:none;
+                 
+                        }
+
+
+        
+
+
+
+              .next-btn{
+                  font-size:35px;
+                  position:absolute;
+                  right:20px;
+                  top:17rem;
+                  background:transparent;
+                  color:#016064;
+                  border:none;
+                 
+                        }
+
+
+
+           .main-img{
+                width:100%;
+                height:27rem;
+                object-fit:cover;
+               
+                
+              }
+
+
+            .modal-content{
+                  margin-top:2rem;
+                  margin-left:auto;
+                  margin-right:auto;
+                  max-width:1170px;
+                 }
+
+
+          .modal-images{
+              display: flex;
+              justify-content:space-around;
+            
+              
+
+                     
+                       }
+
+        .modal-img{
+              width:100%;
+              height:7rem;
+              opacity:0.8;
+             object-fit:cover;
+              border-radius:10px;
+              margin:10px;
+           
+             
+                  }
+
+
+         .modal-img:hover {
+                  opacity: 1;
+                        }
+
+         .modal-img.selected {
+                 opacity: 1;
+                  border:5px solid #016064;
+                  border-radius:20px;
+                  border-top:none;
+                  border-bottom:none;
+
+                       }
+
+     .image-name{
+         font-size:30px;
+        
+         font-weight:bold;
+         color:#016064;
+         text-align:center;
+        
+         margin-bottom:10px;
+        
+                }
+
+      .grid-layout{
+         display:grid;
+         grid-template-columns:1fr 1fr;
+         grid-gap:10px;
+         place-items:center;
+            }
+
+
+      nav{
+         display:flex;
+         justify-content:space-around;
+     
+           }
+
+       .corner-img,.corner-img2{
+            width:100px;
+            height:100px;
+              } 
+
+             .header{
+                     font-size:40px;
+                    
+                     font-weight:bold;
+                     color:#016064;
+                  }
+
+
+            .artistName{
+                 font-size:30px;
+                   
+                     font-weight:bold;
+                     color:#016064;
+                      transform:translateX(120px);
+
+                      }
+
+           .artist3 .artist-img{
+                 transform:translateX(300px);
+                             }
+
+           .artist3 .artistName{
+                     transform:translateX(430px);
+                                 }
+
+
+  
+
+          
+
+                  
+
+
+             
+                  
+
+
+
+
+             </style>
+
+
+             </head>
+
+ 
+             <body>
+
+     <div class="heading">
+              <nav>
+                    <img src="https://i.pinimg.com/736x/52/a2/0f/52a20fbc7672d7a41de70024b2005322.jpg" class="corner-img">
+                   
+                        <h3 class="header">Photography</h3>
+                       
+                  <img src="https://cache.desktopnexus.com/thumbseg/35/35160-bigthumbnail.jpg" class="corner-img2"> 
+
+               </nav>
+
+
+
+         </div>
+
+
+
+
+
+
+
+     <section class="grid-layout">
+             
+                <section class="artist1">
+
+
+                 <img
+                  src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="Riya Somani"
+                  class=" img artist-img"
+                  data-id="10"
+                  alt="artist1"/>
+
+                 <h3 class="artistName">Riya Somani</h3>
+
+
+
+
+
+              <img
+                  src="https://images.pexels.com/photos/11602715/pexels-photo-11602715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="pic-1"
+                  class="img"
+                  data-id="1"
+                  alt="artist2"/>
+
+
+
+                
+
+                <img
+                  src="https://images.pexels.com/photos/10770000/pexels-photo-10770000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="pic-2"
+                  class="img"
+                  data-id="2"
+                  alt="artist2"/>
+
+
+
+ 
+                  <img
+                  src="https://images.pexels.com/photos/9206602/pexels-photo-9206602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="pic-3"
+                  class="img"
+                  data-id="3"
+                  alt="artist2"/>
+
+
+                  <img
+                  src="https://images.pexels.com/photos/3419718/pexels-photo-3419718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="pic-4"
+                  class="img"
+                  data-id="4"
+                  alt="artist3"/>
+
+
+                  
+
+
+
+                 
+
+
+               </section>
+
+                <section class="artist2">
+
+                 <img
+                  src="https://images.pexels.com/photos/6187120/pexels-photo-6187120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="Akash Bagal"
+                  class="img artist-img"
+                  data-id="11"
+                  alt="artist1"/>
+
+
+                 <h3 class="artistName">Akash Bagal</h3>
+
+
+
+
+
+
+
+
+                  <img
+                  src="https://images.pexels.com/photos/761815/pexels-photo-761815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist2-1"
+                  class="img"
+                  data-id="1"
+                  alt="art1"/>
+
+                  <img
+                  src="https://images.pexels.com/photos/627678/pexels-photo-627678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist2-2"
+                  class="img"
+                  data-id="2"
+                  alt="artist2"/>
+
+
+                  <img
+                  src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist2-3"
+                  class="img"
+                  data-id="3"
+                  alt="artist3"/>
+
+
+                  <img
+                  src="https://images.pexels.com/photos/1550060/pexels-photo-1550060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist2-4"
+                  class="img"
+                  data-id="4"
+                  alt="artist4"/>
+
+
+
+                  
+
+
+
+
+                </section>
+
+
+
+              <section class="artist3">
+
+                 <img
+                  src="https://images.pexels.com/photos/1262287/pexels-photo-1262287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="Priya Desai"
+                  class="img artist-img"
+                  data-id="12"
+                  alt="artist1"/>
+
+
+                <h3 class="artistName">Priya Desai</h3>
+
+
+
+
+                  <img
+                  src="https://images.pexels.com/photos/2371013/pexels-photo-2371013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist3-1"
+                  class="img "
+                  data-id="1"
+                  alt="art1"/>
+
+                  <img
+                  src="https://images.pexels.com/photos/3226255/pexels-photo-3226255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist3-2"
+                  class="img"
+                  data-id="2"
+                  alt="artist2"/>
+
+
+                  <img
+                  src="https://images.pexels.com/photos/1447263/pexels-photo-1447263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist3-3"
+                  class="img"
+                  data-id="3"
+                  alt="artist3"/>
+
+
+                  <img
+                  src="https://images.pexels.com/photos/573267/pexels-photo-573267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist3-4"
+                  class="img"
+                  data-id="4"
+                  alt="artist4"/>
+
+
+
+               
+
+
+
+
+
+
+             </section>
+
+
+
+</section>
+-
+
+           <div class="modal">
+
+
+            <button class="close-btn"><i  class="fas fa-times"></i></button>
+
+   
+
+             <div class="modal-content">
+
+  
+            
+
+
+              <button class="prev-btn"><i  class="fas fa-chevron-left"></i></button>
+
+
+              <button class="next-btn"><i  class="fas fa-chevron-right"></i></button>
+ 
+
+
+              <img src="https://images.pexels.com/photos/3308744/pexels-photo-3308744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="main-img">
+                  <h2 class="image-name">Image Name</h2>
+
+
+                   <div class="modal-images">
+
+                  <img
+                  src="https://images.pexels.com/photos/1447263/pexels-photo-1447263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  title="artist3-3"
+                  class="modal-img"
+                  data-id="3"
+                  alt="artist3"/>  
+
+               
+
+
+
+                            
+
+ 
+
+
+                  </div>
+
+
+
+
+
+
+           </div>
+
+                   </div>
+
+            <script>
+
+                
+
+                   function getElement(selection){
+
+                   
+                            const element=document.querySelector(selection);
+
+                            if(element){
+                                  return element;
+                                        }
+
+                           throw new Error
+                              ( `You have selected wrong element` );
+                                          
+                                          
+                                        } 
+
+
+
+
+
+                   function Gallery(element){
+                             this.container = element;
+                             this.list=[...element.querySelectorAll('.img')];
+                             
+                             
+                             this.imageName=getElement('.image-name');
+                             this.modal=getElement('.modal');
+                             this.modalImg=getElement('.main-img');
+                             this.modalImages=getElement('.modal-images');
+                            
+                             this.closeBtn=getElement('.close-btn');
+                             this.nextBtn=getElement('.next-btn');
+                             this.prevBtn=getElement('.prev-btn');
+
+                      
+                        this.closeModal=this.closeModal.bind(this);
+                        this.nextImage=this.nextImage.bind(this);
+                        this.prevImage=this.prevImage.bind(this);
+                        this.chooseImage=this.chooseImage.bind(this);
+                       
+                            
+
+
+
+
+
+                 this.container.addEventListener('click',function(e){
+                
+
+                      this.openModal(e.target,this.list);
+                    
+                      
+                      
+                 }.bind(this));
+
+
+
+
+
+
+
+                     }
+
+
+          Gallery.prototype.openModal = function(selectedImage,list){
+
+                  this.modal.classList.add('open');
+                  this.setMainImage(selectedImage);
+
+
+
+
+                   this.modalImages.innerHTML=list.map(function(image){
+
+                               return` <img
+                  src="${image.src}"
+                  title="${image.title}"
+                  class="${selectedImage.dataset.id===image.dataset.id? 'modal-img selected' : 'modal-img'}"
+                  data-id="${image.dataset.id}"
+                  alt="artist3"/> `;  
+
+
+                                 }).join('');
+
+
+
+                 this.closeBtn.addEventListener('click',this.closeModal);
+                 this.nextBtn.addEventListener('click',this.nextImage);
+                 this.prevBtn.addEventListener('click',this.prevImage);
+                  this.modalImages.addEventListener('click',this.chooseImage);
+                  
+
+                    }
+
+
+       Gallery.prototype.setMainImage=function(selectedimage){
+
+                 this.modalImg.src=selectedimage.src;
+                 this.imageName.textContent=selectedimage.title;
+               
+               
+
+                    }
+
+
+      Gallery.prototype.closeModal=function(){
+
+
+                   this.modal.classList.remove('open');
+                    this.closeBtn.removeEventListener('click',this.closeModal);
+                      this.nextBtn.removeEventListener('click',this.nextImage);
+                 this.prevBtn.removeEventListener('click',this.prevImage);
+                  this.modalImages.removeEventListener('click',this.chooseImage);
+
+
+                }
+
+
+      Gallery.prototype.nextImage=function(){
+                 const selected = this.modalImages.querySelector('.selected');
+                 const next=selected.nextElementSibling || this.modalImages.firstElementChild;
+                 selected.classList.remove('selected');
+                 next.classList.add('selected');
+                 this.setMainImage(next);
+
+                   }
+
+
+    Gallery.prototype.prevImage=function(){
+                 const selected = this.modalImages.querySelector('.selected');
+                 const prev=selected.previousElementSibling || this.modalImages.lastElementChild;
+                 selected.classList.remove('selected');
+                 next.classList.add('selected');
+                 this.setMainImage(prev);
+
+                   }
+
+
+  Gallery.prototype.chooseImage=function(e){
+                      if(e.target.classList.contains('modal-img')){
+
+
+                   const selected = this.modalImages.querySelector('.selected');
+
+                   selected.classList.remove('selected');
+
+                   this.setMainImage(e.target);
+                   e.target.classList.add('selected');
+
+                                }
+                                             }
+
+                 
+                  const artist1= new Gallery(getElement('.artist1'));
+                  const artist2= new Gallery(getElement('.artist2'));
+                  const artist3= new Gallery(getElement('.artist3'));
+
+
+
+
+           </script>
+
+             
+          </body>
+
+
+        </html>

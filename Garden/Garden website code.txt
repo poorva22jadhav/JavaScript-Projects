@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <title>Green Baby</title>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+            <style>
+
+               *{
+                   margin:0;
+                   padding:0;}
+
+
+		#img-logo{
+                      width:100px;
+		      height:100px;
+                      float:left;
+                      top:none;
+                     
+				}
+
+                .navbar{
+                      width:90%;
+		      background-color:#466D1D;
+                      height:35px;
+		      display:flex;
+		      justify-content:space-around;
+		      align-items:center;
+		      position:fixed;
+	              top:0;
+                      right:14px;
+                      z-index:1;
+                      
+                      
+                      }
+
+                  .navbar a{
+                      color:black;
+		      text-decoration:none;
+                      font-weight:bold;
+                      font-size:20px;
+		      }
+                  .navbar a:hover{
+                       color:blue;
+                        }    
+		      
+                  .grid{
+                       display:grid;
+                       column-gap:0px;
+                       grid-template-columns: auto auto;
+                       row-gap:20px;
+                       justify-content:center;
+                       align-items:center;
+                       position:relative;
+ 		       top:50px;
+                       }
+
+                   .grid2{
+                       display:grid;
+                       grid-template-columns:auto auto;
+                        justify-content:center;
+                       align-items:center;
+                       row-gap:10px;
+                       column-gap:100px;
+                       }
+       
+                  #block1{
+                     width:600px;
+                     height:400px;    
+                         }
+      			
+
+                 #block2{
+      			
+                        width:600px;
+                        height:400px;    
+                        background-color:#466D1D;}
+
+                 #block-img{
+                           width:100px;
+                           height:100px;
+                           border-radius:50%;
+                           margin-top:10px;
+                           margin-left:240px;
+                           margin-right:200px;}
+
+                
+                 .sec{
+                           width:400px;
+                           height:400px;}
+
+
+                    h3{
+                    font-size:30px;
+                    color:black;
+                    font-weight:normal;
+                    font-family:georgia;
+                    text-align:center;}
+                  
+                 .story{
+                   font-size:20px;
+                   font-weight:normal;
+                    font-family:cursive;
+                    text-align:center;}
+                 
+                
+                  
+                  
+
+                  .text{
+                       display:block;
+                       font-family:cursive;
+                       font-size:30px;
+                       margin-left:150px;
+                       
+                       }
+                   .i-image{
+                        border-radius:20%;
+                        border:9px solid #466D1D;
+                        border-right:none;
+                        border-left:none;
+                        width:400px;
+                        height:400px;
+                        margin-left:100px;
+                        }
+                    h2{
+                        font-size:40px;
+                        color:#32612D;
+                        font-family:bodoni mt;
+                        font-weight:bold;
+                        margin:60px;
+                        position:relative;
+                        top:50px;
+                        text-align:center;
+                        bottom:10px;
+                        }
+                     h1{
+                        color:#32612D;
+                        font-family:bodoni mt;
+                        font-weight:bold;
+                        position:relative;
+                        top:50px;
+                        border:15px double #32612D ;
+                        border-radius:20%;
+                        border-top:none;
+                        border-bottom:none;
+                        display:inline-block;
+                        margin-left:350px;
+                        text-align:center;
+                        padding:20px;
+                        font-size:60px;      }
+
+                      .i-text{
+                           font-size:30px;
+                           color:#32612D;
+                           font-weight:bold;
+                           font-family:bodoni mt;}
+                        
+                      .img-2{
+                            width:500px;
+                            height:500px;
+                            border-radius:20%;
+                            border:9px solid #466D1D;
+                            border-right:none;
+                            border-left:none;
+                            margin-top:100px;
+                            }
+                    
+                      
+                      
+                      h5{ 
+                             color:#32612D;
+                             font-family:bodoni mt;
+                             font-weight:bold;
+                             border:15px double #32612D ;
+                             border-radius:20%;
+                             border-top:none;
+                             border-bottom:none;
+                             display:inline-block;
+                             margin-left:400px;
+                             text-align:center;
+                             font-size:60px;
+                             position:relative;
+                             top:70px;
+                             
+                             }
+                      
+                        .head{
+                              position:relative;
+                              top:0;
+                              }
+
+                        h2 a{
+                              color:#32612D;
+                              text-decoration:none;}
+  
+                       h2 a:hover{
+                              color:blue;}  
+
+                         .fa{
+                            font-size:15px;
+                            padding:15px;
+                            margin:30px;
+                    } 
+
+                          
+                       .fa-instagram, .fa-pinterest, .fa-whatsapp, .fa-facebook{
+                               border:1px solid black;
+                               border-radius:40%;
+                               background-color:#0C0908;
+                               
+                               } 
+                       
+                    .flex{
+                            display:flex;
+                            flex-direction:row;
+                            justify-content:center;}
+                     .flex2{
+                              display:flex;
+                            flex-direction:row;
+                            justify-content:center;
+                            
+                            font-size:30px;}
+
+                       .flex2 a{
+                              padding:20px;
+                              text-decoration:none;
+                              color:black;}
+                       
+                       .flex2 a:hover{
+                               color:blue;}
+                
+                    .first{
+                            background-color:#466D1D;
+                            font-family:bodoni mt;
+                            font-weight:normal;}
+
+                    .follow{
+                           font-size:40px;
+                           text-align:center;
+                           position:relative;
+                           top:25px;}
+                    hr{
+                         border:1px solid black;
+                         width:80%;
+                         margin-left:150px;}
+
+                    .flex a{
+                          color:white;}
+ 
+                     .flex a:hover{
+                           color:blue;}
+
+                             
+	    </style>
+        </head>
+	<body>
+            <main>
+                <header>
+                           <img src="https://i.pinimg.com/originals/2f/87/03/2f87031d8fc0191cd1b69eed0211a333.jpg" id="img-logo" alt="whitelogo">
+				
+			   <div class="flex-container">
+                                <nav class="navbar">
+					<a href="#home" class="nav-items">HOME</a>
+                                         <a href="#Garden" class="nav-items">FLOWERS</a>
+					<a href="#Events" class="nav-items">EVENTS</a>
+					<a href="#Shop" class="nav-items">SHOP</a>
+				</nav>
+                           </div>
+                </header>
+                   
+                <section >
+			<div class="grid">
+                              <img class="grid-items" id="block1" src="https://images.pexels.com/photos/573259/pexels-photo-573259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="flower-image">
+			      <div class="grid-items" id="block2">
+                                   <img src="https://th.bing.com/th/id/OIP.ikJj_b6Tixqyb_FULMjlpAAAAA?pid=ImgDet&w=298&h=300&rs=1" alt="leaf" id="block-img">
+                                   <h3>Our Green Story</h3>
+                                   <p class="story">HERE in a quiet and dusty room they lie,<br>
+                                                    Faded as crumbled stone and shifting sand,<br>
+                                                    Forlorn as ashes, shrivelled, scentless,<br>
+                                                     Meadows and gardens running through my hand</p>
+
+                              </div>
+                         </div>
+               </section>
+
+            <section>
+                  
+                      <h1> Top flowers in our garden</h1>
+                   
+                   <div class="grid">
+                       <div class="image">
+                        <img src="https://images.pexels.com/photos/954181/pexels-photo-954181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="i-image">
+                          </div>
+                          <div class="text">
+                         <h2>Aubrieta</h2>
+                        <p class="i-text">Named after Claude Aubriet, a French artist who famously painted them, Aubrietas spread low with small violet, pink or white flowers. If you're creating a rock garden, Aubrietas are ideal as it prefers sandy, well-drained soil.</p>
+                       </div>
+
+                        <div class="image">
+                        <img src="https://images.pexels.com/photos/913104/pexels-photo-913104.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="i-image">
+                        </div>
+                         <div class="text">
+                        <h2>Bellflower</h2>
+                        <p class="i-text">With their happy, star-like flowers, the variety of Bellflowers available can fit any gardener's needs. Ranging from short to tall, and featuring almost every color of the rainbow, these cheery flowers are a great fit for your garden or cut to display in your home.</p>
+                       </div>
+
+ 			<div class="image">
+                        <img src="https://images.pexels.com/photos/216354/pexels-photo-216354.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="i-image">
+                         </div>
+                         <div class="text">
+                         <h2>Blackeyed Susan</h2>
+                        <p class="i-text">Known as the official flower for the Preakness, Blackeyed Susans are a member of the sunflower family. In addition to making a beautiful indoor flower arrangement, Blackeyed Susans attract butterflies, bees and other beneficial insects.</p>
+                       </div>
+
+			<div class="image">
+                        <img src="https://images.pexels.com/photos/2127607/pexels-photo-2127607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="i-image">
+                        </div>
+              		<div class="text">
+                         <h2>Browallia</h2><
+                        <p class="i-text">The Browallia will grow in the darkest corners of your garden, preferring full shade and protection from the hot sun. It also makes for a great indoor plant during the summer as long as it's kept damp but not wet</p>
+                       </div>
+
+			
+
+                   </div>
+            </section>
+
+            <section>
+                    <div class="about-us">
+                    <h5>Visit,Learn,Join<h5>
+                    </div>
+                <div class="grid2">
+                    <div class="image2">
+                    <img src="https://www.rhs.org.uk/getmedia/23c8a7a5-070a-408a-ba97-5c737203380c/Home-20210328_GM_0834-600x450" class="img-2">
+                    
+                    <h2 class="head"><a href="#">Gardening</a></h2>
+                    </div>
+                    
+                    <div class="image2">
+                    <img src="https://www.rhs.org.uk/getmedia/9e91c716-b544-49bc-8bc5-fd2662ec3240/Days-out" class="img-2">
+                     
+                    <h2 class="head"><a href="#">Days out</a></h2>
+                    </div>
+                     
+                    <div class="image2">
+                    <img src="https://www.rhs.org.uk/getmedia/69351c98-339b-4b75-b225-974a6c34e5e4/Home-NHJH17248-800x450" class="img-2">
+                     
+                    <h2 class="head"><a href="#">Get involved</a></h2>
+                    </div>
+	           
+                    <div class="image2">
+                    <img src="https://www.rhs.org.uk/getmedia/5b282670-693e-4d9e-bec8-178ed5de1968/Home-Shopping-800x450" class="img-2">
+                   
+                    <h2 class="head"><a href="#">Shop with us</a></h2>
+                    </div>
+                 </div>
+           </section>
+            </main>
+                   <footer>
+                                <section class="first">
+
+                                  <p class="follow">Follow us on social media</p>
+                                           <div class="flex">
+                                       <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+                                       <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+                                       <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank"></a>
+                                        <a href="https://www.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+                                           </div>
+                                           
+                                              <hr>
+
+                                               <div class="flex2">
+                                                <a href="#">Home</a>
+						 <a href="#">About us</a>
+						 <a href="#">Contact</a>
+						 <a href="#">Products</a>
+						 <a href="#">Services</a>
+
+                                            
+                                           </div>
+                                </section>
+                  </footer>
+        </body>
+</html>

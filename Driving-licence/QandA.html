@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q & A</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+   
+   
+
+
+
+
+
+ <style>
+
+         body{
+              background-image:url("https://images.pexels.com/photos/33488/navigation-car-drive-road.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+              background-size:cover;
+              font-family:georgia;
+             
+             }
+        
+
+          main{
+               display:grid;
+               place-items:center;}
+
+
+         .title h2{
+                text-align:center;
+                position:relative;
+                top:10px;
+                font-family:"Great Vibes",cursive;
+                font-size:40px;
+                color:black;
+                }
+         
+           .question-title p{
+
+                 font-size:30px;
+                 text-align:center;
+                 font-family:cursive;
+                 font-weight:bold;
+                
+                }
+
+
+           .question-title{
+                     display:flex;
+                     justify-content:space-around;
+                     align-items:center;
+                     box-shadow:5px 5px 10px black;
+                     margin-bottom:30px}
+                 
+           .question-btn{
+                  transition: all 0.3s linear;
+                  border:transparent;
+                  background:transparent;
+                  cursor:pointer;
+                  font-size:30px;
+                  font-size:bold;
+                  z-index:1;
+                   }
+
+           .question-btn:hover{
+                     background:black;
+                     color:white;}
+
+          
+
+
+
+           .question-text{
+                   font-size:25px;
+                   text-align:center;
+                   font-weight:bold;
+                   font-family:cursive;
+                   display:none;
+                  }
+
+           .show-text .question-text{
+                 display:block;}
+
+            .minus-icon{
+                    display:none;}
+
+            .show-text .minus-icon{
+                    display:inline;}
+
+            .show-text .plus-icon{
+                     display:none;}
+
+            .overlay{
+                                   position:absolute;
+                                   top:0;
+                                   left:0;
+                                   width:100%;
+                                   height:100vh;
+                                   background-color:rgba(0,0,0,0.4); }
+
+
+
+            
+
+
+
+ </style>
+
+
+
+
+
+    
+  </head>
+  <body>
+        <div class="overlay"></div>
+      <section class="questions">
+
+               
+     
+       
+        <div class="title">
+          <h2>General Questions</h2>
+        </div>
+        
+        <div class="section-center">
+         
+       
+       
+         <article class="question">
+          
+            <div class="question-title">
+             <p>What to do in case my driving licence details are not showing on sarathi portal?</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+          
+            </div>
+            
+           
+           
+            <div class="question-text">
+               
+              <p>
+               Steps follow for Find Application Number :-
+                   1. Visit https://sarathi.parivahan.gov.in/
+                   2. Select concerned state
+              </p>
+            </div>
+          </article>
+
+
+
+             <article class="question">
+          
+            <div class="question-title">
+             <p>Is NOC required to renew with different  class of vehicle how to duplicate it?</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+          
+            </div>
+            
+           
+           
+            <div class="question-text">
+               
+              <p>
+               A permanent Drivers License is valid throughout India. However, you can visit the local RTO for more information
+              </p>
+            </div>
+          </article>
+
+       
+
+        
+          <article class="question">
+          
+            <div class="question-title">
+              <p>What is additional MV tax? And How can i get it?</p>
+              <button type="button" class="question-btn">
+                <span class="  plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+            </div>
+            
+            <div class="question-text">
+             
+              <p>
+              Additional Motor Vehicle tax is implied on the vehicle when certain parameters exceed the prescribed limit for the vehicle. For example – Unladen weight of vehicle exceeds 50000kg, etc.
+              </p>
+            </div>
+          </article>
+
+           <article class="question">
+          
+            <div class="question-title">
+             <p>How can i obtain a permanent driving licence?</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+          
+            </div>
+            
+           
+           
+            <div class="question-text">
+               
+              <p>
+                You need to contact your Zonal Office/Transport Department, while carrying the original documents
+              </p>
+            </div>
+          </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <script>
+
+             const questions=document.querySelectorAll(".question");      
+                       
+                  questions.forEach(function(question){
+                            const btn=question.querySelector(".question-btn");
+                              
+                               btn.addEventListener("click",function(){
+                                       questions.forEach(function(item){
+
+                                       if (item!==question){
+                                                item.classList.remove("show-text");
+                                                           }
+
+                             });
+                                          
+
+
+
+
+                            
+                           question.classList.toggle("show-text");
+                               
+                          });
+
+
+
+                   });
+
+
+
+  </script>
+
+  </body>
+
+       </html>
+
+
+
+

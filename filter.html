@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+           
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Filter Project</title>
+           <style>
+
+             .companies{
+                  display:flex;
+                  flex-direction:column;
+                  align-items:flex-start;
+                  width:300px;
+                  margin:15px;
+                    }
+
+             .products-container{
+                    display:grid;
+                    grid-template-columns:300px 300px 300px;
+                    justify-content:center;
+                   
+                 }
+
+          
+
+            .company-button{
+                font-size:15px; 
+                 border:none; 
+                 margin:6px; 
+                 
+                 }
+
+
+           .search-input{
+                  width:300px;
+                  height:20px;
+                  background:linear-gradient(rgb(160,160,160),rgb(150,150,150));
+                  border:none;
+                 
+                  font-size:17px;
+                        }
+
+
+              .product-img{
+                   width:450px;
+                   height:300px;
+                   border:2px solid black;
+                    border-radius:15px;
+                   }
+
+               .product-name{
+                     font-size:20px;
+                     
+                     }
+
+               h5{
+                   font-size:20px;}
+
+                footer span{
+                       font-weight:bold;}
+
+                 footer{
+                        text-align:center;
+                        width:500px;
+                        margin:0px;}
+                
+
+           </style>
+
+
+    </head>
+
+
+        <body>
+
+             <section class="products">
+
+                   <div class="filter-container">
+                      <form class="input-form" method="post">
+                           <input class="search-input"  type="text" placeholder="search..."/>
+
+                      </form>
+
+
+                      <h5>Company</h5>
+                          <article class="companies">
+                              <button class="company-button">All</button>
+                               <button class="company-button">Ikea</button>
+                               <button class="company-button">Marcos</button>
+                               
+
+                          </article>
+
+                   </div>
+
+
+                   <div class="products-container">
+
+                   </div>
+
+            </section>
+
+
+
+
+        <script>
+          
+          const products = [
+  {
+    id: 'rec43w3ipXvP28vog',
+    title: 'High-back bench',
+    company: 'ikea',
+    image:
+      'https://images.pexels.com/photos/3138839/pexels-photo-3138839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 3000,
+  },
+  {
+    id: 'rec4f2RIftFCb7aHh',
+    title: 'Albany table',
+    company: 'marcos',
+    image:
+      'https://images.pexels.com/photos/631411/pexels-photo-631411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 5000,
+  },
+  {
+    id: 'rec8kkCmSiMkbkiko',
+    title: 'Accent chair',
+    company: 'caressa',
+    image:
+      'https://images.pexels.com/photos/4180974/pexels-photo-4180974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 3000,
+  },
+  {
+    id: 'recBohCqQsot4Q4II',
+    title: 'Wooden table',
+    company: 'caressa',
+    image:
+      'https://images.pexels.com/photos/1441596/pexels-photo-1441596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 6000,
+  },
+  {
+    id: 'recDG1JRZnbpRHpoy',
+    title: 'Dining table',
+    company: 'caressa',
+    image:
+      'https://images.pexels.com/photos/271696/pexels-photo-271696.jpeg?auto=compress&cs=tinysrgb&w=600',
+    price: 10000,
+  },
+  {
+    id: 'recNWGyP7kjFhSqw3',
+    title: 'Sofa set',
+    company: 'liddy',
+    image:
+      'https://images.pexels.com/photos/5824520/pexels-photo-5824520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 50000,
+  },
+  {
+    id: 'recZEougL5bbY4AEx',
+    title: 'Modern bookshelf',
+    company: 'marcos',
+    image:
+      'https://images.pexels.com/photos/2177482/pexels-photo-2177482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 8000,
+  },
+  {
+    id: 'recjMK1jgTb2ld7sv',
+    title: 'Emperor bed',
+    company: 'liddy',
+    image:
+      'https://images.pexels.com/photos/14775080/pexels-photo-14775080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 10000,
+  },
+  {
+    id: 'recmg2a1ctaEJNZhu',
+    title: 'Utopia sofa',
+    company: 'marcos',
+    image:
+      'https://images.pexels.com/photos/8580720/pexels-photo-8580720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 30000,
+  },
+  {
+    id: 'recvKMNR3YFw0bEt3',
+    title: 'Entertainment center',
+    company: 'liddy',
+    image:
+      'https://images.pexels.com/photos/7027977/pexels-photo-7027977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 6000,
+  },
+  {
+    id: 'recxaXFy5IW539sgM',
+    title: 'Albany sectional',
+    company: 'ikea',
+    image:
+      'https://images.pexels.com/photos/8031899/pexels-photo-8031899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 6000,
+  },
+  {
+    id: 'recyqtRglGNGtO4Q5',
+    title: 'Leather sofa',
+    company: 'liddy',
+    image:
+      'https://images.pexels.com/photos/3935324/pexels-photo-3935324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: 7000,
+  },
+];
+
+
+let filteredCopy=[...products];
+
+const container=document.querySelector(".products-container");
+ 
+
+  const displayProducts=()=>{
+
+
+                     if(filteredCopy.length < 1){
+                          container.innerHTML=`<h3>Sorry,no products matched your search</h3>`;
+                          return;
+                                                }
+
+
+
+                      container.innerHTML = filteredCopy.map(({id,title,image,price})=>{
+
+                                 
+                                 return`
+                           <article class="product" id="${id}">
+
+                             
+                            <img src="${image}"class="product-img">
+                            
+                            <footer>
+
+                                <h5 class="product-name">${title}</h5>
+                                <span>${price}</span>
+                            </footer> </article>`;
+                          });
+
+                               };
+                     displayProducts();
+
+
+
+      // Text Filter
+
+      const form = document.querySelector(".input-form");
+      const searchInput=document.querySelector(".search-input");
+
+         form.addEventListener("keyup",()=>{
+
+                 const inputValue=searchInput.value;
+                         
+                  filteredCopy=products.filter((product)=>{
+                                 if(product.title.toLowerCase().includes(inputValue)){
+                                     return product;
+                                         }
+
+                              
+                        });
+
+                 displayProducts();
+
+                   });
+
+
+
+           // filter Buttons
+
+
+          const companiesDOM = document.querySelector(".companies");
+          
+                      const displayButtons= () =>{
+                                 const buttons = ['all',...new Set(products.map((product)=>product.company))];
+                                  companiesDOM.innerHTML=buttons.map((company)=>{
+                                             return ` <button class="company-button" data-id="${company}">${company}</button>`;
+
+
+                                            }).join(" ");
+                                         };
+
+                           displayButtons();
+
+                            console.log(companiesDOM);
+
+                           companiesDOM.addEventListener("click",(e)=>{
+                                   const el=e.target;
+                                   if(el.classList.contains("company-button")){
+                                           if(el.dataset.id=="all"){
+                                                    filteredCopy=[...products];
+                                                        }
+                                            
+                                            else{
+                                                   filteredCopy=products.filter((product)=>{
+                                                         if(product.company===el.dataset.id){
+                                                                 return product;
+                                                            }
+
+                                               
+
+                                                 }); 
+                                                      }
+
+                                                searchInput.value=" ";
+                                                displayProducts();
+                                                           }
+  
+
+                                          });
+
+       </script>
+     
+
+
+     </body>
+
+
+
+
+
+</html>

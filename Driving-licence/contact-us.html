@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en>
+     <head>
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+           <title>Contact Us </title>
+           <!--<https://images.pexels.com/photos/2883802/pexels-photo-2883802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1> -->
+            <!--<https://images.pexels.com/photos/3328247/pexels-photo-3328247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1> -->
+              <!--<https://images.pexels.com/photos/1574669/pexels-photo-1574669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1> -->
+           <style>
+                  body{
+                      
+                       color:black;
+                       font-family:cursive;
+
+                       }
+
+ 
+                  *{
+                      margin:0;
+                      padding:0;}
+               
+                  .container{
+                             display:grid;
+                             grid-template-columns:1fr 1fr;
+                             align-items:baseline;
+                             position:relative;
+                             top:50px;
+                             }
+
+
+                 #contact-us{
+                         background-image:url("https://images.pexels.com/photos/3787149/pexels-photo-3787149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                         width:100%;
+                         height:120vh;
+                         background-size:cover;
+                         }
+
+                
+    
+               .form{
+                   
+                   
+                    
+                    font-size:30px;
+                    animation:form-ele 1s ease 1;
+                    transform:translateX(300px);
+                    
+                    }
+               .form-element{
+                   margin:10px;
+                   padding:20px;}
+
+               .Button{
+                   font-size:20px;
+                   background:black;
+                   color:white;
+                   border:none;
+                   padding:10px 30px;
+                   cursor:pointer;
+                   margin-bottom:15px;
+                   transition:font-size 0.2s;
+                   position:relative;
+                   left:70px;
+                   
+                   }
+
+               .Button:hover{
+                     
+                     font-size:23px;
+                     }
+
+             .form h2{
+                 position:relative;
+                 left:20px;
+                 }
+
+               
+
+              h3{
+          
+                  font-size:40px;}
+
+             .logo{
+                 float:right;
+                 width:600px;
+                 height:400px;
+                 position:relative;
+                 top:-450px;}
+
+
+            .info{
+                  
+                 
+                  font-size:25px;
+                  line-height:40px;
+                   transform:translateX(150px);
+            
+                  animation:info-ele 1s ease 1;
+                 
+
+                 }
+
+
+         .header2{
+               font-size:50px;}
+
+
+               
+               input, .textarea{
+                      border:2  solid black;
+                      border-radius:10px;
+                      padding:5px;
+                      font-size:19px;
+                      
+                       position:relative;
+                      right:800;
+                      }
+
+            .flex-container{
+                      display:flex;
+                       flex-direction:row;
+                      justify-content:space-around;}
+
+            .list{
+                  list-style-type:none;}
+
+
+            .footer1{
+                   background:black;
+                   color:white;
+                   font-size:25px;
+                   padding:35px;
+                   margin:0;
+                   }
+
+
+           .social-icons{
+                  padding:30px;
+                  position:relative;
+                  left:500px;
+                  transition:font-size 2s;
+                  font-size:30px;}
+
+
+            .flex-box{
+                  display:flex;
+                  justify-content:space-around;
+                  background:black;
+                  opacity:0.6;
+                  height:5vh;
+                  align-items:center;
+                  }
+            .flex-box a{
+                  color:white;
+                  text-decoration:none;
+                  font-size:20px;
+                   }
+
+            .nav-items::after{
+                 content:'';
+                  width:0%;
+                  height:3px;
+                  background:gray;
+                  display:block;
+                  margin:auto;
+                  transition:0.6s;
+                   }
+            
+             .nav-items:hover::after{
+                  width:100%;
+               }
+
+
+              .fa {
+                    color:white;
+                    text-decoration:none;
+                    margin:15px;
+                    }
+               
+             .fa:hover{
+                    color:blue;
+                    font-size:40px;}
+             
+             
+          
+                
+ 
+
+          @keyframes form-ele{
+                 0%{
+                     transform:translateX(-800px);
+                 }
+
+                 100%{
+                      transform:translateX(300px);
+                     }
+                   }
+
+
+          @keyframes info-ele{
+                0%{
+                     transform:translateX(1400px);
+                  }
+                 
+                 100%{
+                       transform:translateX(150px);
+                      }
+                   }
+
+
+       @media only screen and (max-width:600px){
+              #contact-us{
+                  width:100%;
+                  height:100%;
+                  }
+              h1{
+                    font-size:30px;
+                    text-align:center;}
+                                  
+             
+            .form{
+                     transform:translateX(100px);
+                     font-size:18px;
+
+                 }
+            
+             .container{
+                       grid-template-columns:1fr;
+                         top:47px;}
+
+               .social-icons{
+                         left:80px;}
+
+             
+         }
+
+                   .overlay{
+                                   position:absolute;
+                                   top:0;
+                                   left:0;
+                                   width:100%;
+                                   height:100vh;
+                                   background-color:rgba(0,0,0,0.4); }
+
+       
+               
+
+           </style>
+     </head>
+      
+          <body>
+         
+                 <main>
+                  
+
+                         <div class="overlay"></div>
+                       
+                     
+                    <section id="contact-us">
+                       
+                             
+                           
+                         
+                                   <div class="container">
+                      
+                          <div class="form">
+                            <h2 class="header2">Get In Touch</h2>
+                                 <form class="form-element" action="/cgi-bin/test.cgi" method="post" name="FormName" onsubmit="return (ValidationForm());">
+                                     
+                                      <lable for="username">Name<lable><br>
+                                      <input type="text" id="username" name="Name" class="hello"/><br>
+                                      <lable for="email">Email-Address</lable><br>
+                                      <input type="text" id="email" name="Email-Address" class="hello" /><br>
+                                      <lable for="phone-no">Phone</lable><br>
+                                      <input type="tel" id="phone-no" name="Phone-no" class="hello" /><br>
+                                      <lable for="text">Message</lable><br><br>
+                                      <textarea id="text" name="text-area" rows="10" cols="30" placeholder="Write your message here...." class="textarea"></textarea><br>
+                                       <input type="submit" value="submit" class="Button">    
+                        
+                                       
+                                    
+
+                                  </form>
+                                         </div> 
+
+
+                                  
+                           <div class="info">
+                                     
+                                    <h2 class="header2">Our Contacts</h2><br>
+                                     <h3>Address</h3>
+                                    <p class="address">“Mannat”, Land’s End, Bandstand, <br> Byramji Jeejeebhoy Road,<br> Bandra (West), Mumbai – 400050</p>
+                                     <h3>Phone</h3>
+                                    <p class="phone-number">8180956068<br>9673881630</p>
+                                   <h3>Email-Address</h3>
+                                   <p class="b-email">atish6654bajwani@gmail.com</p>
+                                     
+                           </div>     
+                          
+                                               </section>
+
+                        
+
+                                  </div>
+                 </main>
+
+
+                     
+
+
+                    <script>
+                              
+                                
+                              
+                                 function ValidationForm(){
+                                              let x= document.forms["FormName"]["Name"].value;
+                                              let y=document.forms["FormName"]["Phone-no"].value;
+                                              let z= document.forms["FormName"]["text-area"].value;
+                                              let f= document.forms["FormName"]["Email-Address"].value;
+                                              let index= f.indexOf("@");
+                                              let lastinde=f.lastIndexOf(".");
+                                              let char = x.charAt(0);
+                                              let regExpr=/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+                                              let test=regExpr.test(x);
+                                              let uppercase=char.toUpperCase();
+                                                
+                                              if(x== "" && y=="" && z== "" && f=="" ){
+                                                       alert("Fill Up The Form");
+                                                       return false;
+                                                                 }
+
+                                               
+                                              if(x== "" || x.length > 10){
+                                                      alert("Enter Valid Username");
+                                                       return false;}
+
+                                               if(char != uppercase){
+                                                        alert("Username should start with uppercase ");
+                                                         return false;}
+                                                                      
+                                              if(test==true){
+                                                        alert("Username should contain special character");
+                                                         return false;}
+
+
+                                             if(index < 1 || ( lastinde - index < 2)){
+                                                       alert("Enter Valid Email Adrress");
+                                                        return false;}
+                                               
+
+                                             if(y.length != 10){
+                                                       alert("Enter Valid Number");
+                                                       return false;
+                                                                    }
+
+                                                 if(z== ""){
+                                                      alert("Enter your message");
+                                                       return false;}
+
+                                               
+
+
+                                               
+                                                    else{
+                                                                return (true);
+                                                                               }
+                                              
+                                                                         }
+
+                               
+                                            
+
+
+
+                    </script>
+
+
+          </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+       <head>
+            <title>Artistic Mind</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+             />
+
+              <link
+          rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+            <style>
+              
+            nav{ display:flex;
+                 justify-content:space-around;
+                
+                 
+                  }
+
+            .btn{
+                     font-size:30px;
+                  
+                     font-weight:bold;
+                     color:black;
+                      border:none;
+                     cursor:pointer;
+                                   }
+
+          .btn:hover{
+                  color:blue;}
+
+
+             .corner-img{
+               width:150px;
+               height:100px;
+               position:relative;
+               top:0;
+               left:0;}  
+
+     .corner-img2{
+               width:140px;
+               height:100px;
+               position:relative;
+               top:0;
+               right:0;} 
+
+
+
+   .paintImg{
+           width:400px;
+           height:300px;
+            border:5px solid black;
+             border-radius:20px;
+             border-top:none;
+             border-bottom:none;
+            
+            }
+
+
+
+   .articles{
+            display:grid;
+            grid-template-columns:auto auto;
+            place-items:center;
+            
+              color:black;
+             text-align:center;
+             
+            }
+
+    article header{
+            text-align:center;}
+
+  
+  .painter{
+       font-size:37px;}
+
+ .price{
+      font-size:30px;
+       }
+
+.btn-container{
+    margin:60px;
+}
+     
+                  
+
+
+
+
+             </style>
+
+
+             </head>
+           <body>
+             
+             <section class="paintings">
+
+        
+          <div class="btnContainer">
+              <nav>
+                  
+                    <button type="button" class="btn" data-id="all">All</button>
+                    <button type="button" class="btn" data-id="sculpture">Sculpture</button>
+                    <button type="button" class="btn" data-id="canvas">Canvas</button>
+                    <button type="button" class="btn" data-id="wall">Wall</button>
+                   
+                       
+
+               </nav>
+
+
+
+         </div>
+
+
+
+           <div class="articles">
+
+            
+
+
+              <article class="item">
+
+                    <img src="https://images.pexels.com/photos/3778868/pexels-photo-3778868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="paintImg">
+                  <header>
+
+                     <h3 class="painter">Riya</h3><br>
+                    <h2 class="price">290</h3>
+
+                  </header>
+
+              </article>
+
+
+
+
+
+           </div>
+
+
+
+
+
+
+             </section>
+
+
+
+
+
+
+          
+
+
+
+
+           <script>
+
+
+            const paintings=[
+
+
+                         {id:1,
+                         category:"sculpture",
+                        image:"https://images.pexels.com/photos/3778200/pexels-photo-3778200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Sculptural Painting",
+                        price:"300₹",
+                         
+                       },
+
+                  
+
+
+                       {id:2,
+                        category:"sculpture",
+                        image:"https://images.pexels.com/photos/3094225/pexels-photo-3094225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Sculptural Painting",
+                        price:"500₹",
+                        
+                       },
+
+                        {id:3,
+                         category:"wall",
+                        image:"https://images.pexels.com/photos/162379/lost-places-pforphoto-leave-factory-162379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Wall Painting",
+                        price:"1100₹",
+                       
+                        },
+
+                       {id:4,
+                        category:"canvas",
+                        image:"https://images.pexels.com/photos/2956376/pexels-photo-2956376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Canvas Painting",
+                        price:"400",
+                       
+                        },
+
+                          {id:5,
+                        category:"sculpture",
+                        image:"https://images.pexels.com/photos/4898081/pexels-photo-4898081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Sculptural Painting",
+                        price:"800₹",
+                       
+                        },
+
+                          {id:6,
+                        category:"wall",
+                        image:"https://images.pexels.com/photos/3459713/pexels-photo-3459713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Wall Painting",
+                        price:"450",
+                       
+                        },
+
+                          {id:7,
+                        category:"wall",
+                        image:"https://images.pexels.com/photos/6989/city-love-rainbow-nyc.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Wall Painting",
+                        price:"930₹",
+                       
+                        },
+     
+                         {id:8,
+                        category:"canvas",
+                        image:"https://images.pexels.com/photos/1670043/pexels-photo-1670043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        painter:"Canvas Painting",
+                        price:"670₹",
+                       
+                        },
+
+                         
+
+                         
+
+                    ];
+
+
+                           const articleContainer=document.querySelector(".articles");
+                           const BtnContainer=document.querySelector(".btnContainer");
+                           const Btns=document.querySelectorAll(".btn");
+
+
+                            console.log(Btns);
+
+
+
+
+               window.addEventListener('DOMContentLoaded',function(){
+
+                                 displayItems(paintings);
+                                 displayPaintingBtns();
+                                  
+                            });
+
+                        
+
+
+
+
+                function displayItems(paintings){
+
+
+                       let PaintItems=paintings.map((item)=>{
+
+                                    return`  <article class="item">
+
+                    <img src="${item.image}" class="paintImg">
+                 <header>
+                     <h3 class="painter">${item.painter}</h3>
+                    <h2 class="price">${item.price}</h3>
+                </header>
+
+              </article>`;
+
+                               });
+
+                     PaintItems=PaintItems.join(" ");
+                     articleContainer.innerHTML=PaintItems;
+
+                       
+
+
+                 }
+
+
+
+
+              function displayPaintingBtns(){
+
+                    const categories = paintings.reduce(function(values,item){
+                                       if(!values.includes(item.category)){
+                                              values.push(item.category);
+                                          }
+
+
+                                       return values;
+
+
+                                    },["all"]);
+
+
+                   
+                     Btns.forEach(function(button){
+                               button.addEventListener('click',function(e){
+
+                                          const category=e.currentTarget.dataset.id;
+
+
+
+                                          const paintingCategory=paintings.filter(function(pntItem){
+                                                         if(pntItem.category===category){
+                                                                 return pntItem;
+                                                               }
+
+                                                     });
+
+
+                                          if(category=="all"){
+                                                 return displayItems(paintings);
+                                             }
+
+                                          else{
+                                                 return displayItems(paintingCategory);
+
+                                               }   
+
+
+                                        });
+
+
+                           });
+                                   
+
+
+
+
+                    }
+
+                        
+              
+
+
+
+
+           </script>
+
+           </body>
+
+
+           </html>

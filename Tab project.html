@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Tab project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+       />
+
+
+
+      <style>
+
+            .section{
+                   display:grid;
+                   grid-template-columns: 1fr 1fr;
+                   grid-gap:20px;}
+
+
+            .header{
+                    text-align:center;
+                    font-weight:bold;}
+
+             
+             #image{
+                    width:100%;
+                    height:50vh;}
+
+             .btn-container{
+                     background:linear-gradient(rgba(150,150,150),rgba(150,150,150));
+                     height:30px;
+                     display:flex;
+                     justify-content:space-around;
+                     }
+
+             .btn{
+                   border:none;
+                   background-color:transparent;
+                   font-size:20px;
+                   width:35%;
+                   
+                   }
+
+           
+
+             .content{
+                   display:none;}
+
+
+             .content.active{
+                   display:block;}
+
+             .btn.active{
+                   background-color:white;
+                   border:1px solid black;}
+             
+            .text ,h3{
+                  text-align:center;}
+             
+
+      </style>
+              
+</head>
+         
+
+<body>
+       <div class="header">
+            <h1>About</h1>
+            <p>This is kind of project that i should not be working on hehe</p>
+
+       </div>
+             	<section class="section">
+       <article class="img-container">
+           <img id="image" src="https://images.pexels.com/photos/14538374/pexels-photo-14538374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+      </article>
+
+
+
+         <article class="about">
+
+               <div class="btn-container">
+                  <button type="button" class="btn active" data-id="history">History</button>
+                  <button type="button" class="btn" data-id="vision">Vision</button>
+                  <button type="button" class="btn" data-id="goals">Goals</button>
+           </div>
+
+
+
+               <div class="content active" id="history">
+               <h3>History</h3>
+               <p class="text">Let’s be honest right from the start.
+                No matter how many books about programming you read, videos you watch, or podcasts you listen to
+                if you want to become a better developer, you have to practice continuously.
+                In the front-end space, a lot of frameworks exist: React, Angular, Vue, just to name a few
+                <ul>
+                   <li>Software developer</li>
+                   <li>Web developer</li>
+                   <li>Application Developer</li>
+
+                </ul>
+             </p>
+              </div>
+
+
+                <div class="content" id="vision">
+               <h3>Vision</h3>
+               <p class="text">Let’s be honest right from the start.
+                No matter how many books about programming you read, videos you watch, or podcasts you listen to
+                if you want to become a better developer, you have to practice continuously.
+                In the front-end space, a lot of frameworks exist: React, Angular, Vue, just to name a few</p>
+              </div>
+
+                 <div class="content" id="goals">
+               <h3>Goals</h3>
+               <p class="text">Let’s be honest right from the start.
+                No matter how many books about programming you read, videos you watch, or podcasts you listen to 
+                if you want to become a better developer, you have to practice continuously.
+                In the front-end space, a lot of frameworks exist: React, Angular, Vue, just to name a few</p>
+              </div>
+
+     </article>
+
+
+
+
+
+
+         </section>
+
+     <script>
+                const btns=document.querySelectorAll(".btn");
+                const about=document.querySelector(".about");
+                const articles=document.querySelectorAll(".content"); 
+
+                        
+                          about.addEventListener('click', function(event){
+
+                              const id=event.target.dataset.id;
+                                 if(id){
+                                        btns.forEach(function(button){
+                                             button.classList.remove("active");
+                                              event.target.classList.add("active");
+
+
+                                            });
+                                        
+                                          articles.forEach(function(article){
+
+                                                  article.classList.remove("active");
+
+                                             });
+                                            const element= document.getElementById(id);
+                                            element.classList.add("active");
+                           
+                                       }
+                                         
+
+
+                           });
+
+     </script>
+</body>
+  </html>

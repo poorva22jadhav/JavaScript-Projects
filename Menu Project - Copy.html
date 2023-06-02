@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <title>Menu card</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+
+
+
+
+
+          <style>
+                  body{
+                          background:linear-gradient(black,grey);
+                          color:white;
+                          font-family:lucida handwriting}      
+
+
+
+ 
+                 main{
+                         display:grid;
+                         
+                         place-items:center;
+                      }
+         
+               .menu-item{
+                    display: grid;
+                    grid-template-columns:1fr 1fr;
+                    grid-gap:0px;
+                    max-width: 35rem;
+                  }
+
+
+               .section-center{
+                     width: 90vw;
+                     margin: 0 auto;
+                     max-width: 1170px;
+                    display: grid;
+                    gap: 3rem 2rem;
+                    justify-items: center;
+                    grid-template-columns:auto auto;
+                    animation:secCen 1s ease  1;
+                    }
+
+
+                h1{    transition:font-size 0.8s;
+                       text-align:center;
+                       font-size:0px;
+                       margin-top:10px;
+                       position:relative;
+                       
+                       }
+
+               
+
+               hr{
+                       width:10%;
+                       position:absolute;
+                       top:65px;
+                       left:45%;
+                       border-color:black;}
+
+              .menu-img{
+                       width:200px;
+                       height:150px;
+                       border:2px solid black;}
+
+
+              header{
+                     
+                      display:flex;
+                       justify-content:space-between;
+                      }
+
+                 
+
+             .menu-text{
+                     
+                     font-weight:bold;
+                     }
+
+              .btn{
+                    font-size:20px;
+                   font-family:lucida handwriting;
+                    margin:15px;
+                    cursor:pointer;
+                    background:#222222;
+                    opacity:0.8;
+                    color:white;
+                    padding:9px;
+                    transition:font-size 0.1s ;
+                    font-weight:bold;
+                   }
+
+             .btn:hover{
+                   font-size:22px;}
+
+                .btn-container{
+                      position:relative;
+                      right:25%;
+                      left:25%;
+                      margin-bottom:15px;
+                      animation: button-ani 1s ease 1;
+                      
+                     }
+            #img{
+                  width:100px;
+                  height:100px;
+                  border-radius:50%;
+                  position:absolute;
+                  top:0;
+                  animation:img-trans 1s ease 1;}
+
+          
+                   
+
+
+            @keyframes secCen{
+                       0%{
+                            transform:translateX(-1400px);
+                         }
+
+                        100%{
+                             transform:translateX(0px);}
+                    }
+
+            @keyframes button-ani{
+                       0%{
+                            transform:translateX(-1400px);
+                         }
+
+                        100%{
+                             transform:translateX(0px);}
+                    }
+
+
+
+
+           @keyframes img-trans{
+                       0%{
+                            transform:rotate(0deg);
+                         }
+
+                        100%{
+                             transform:rotate(360deg);}
+                    }
+
+
+
+
+              
+
+          </style>
+      </head>
+
+           <body>
+                  <main>
+                       <section class="menu">
+                               
+
+                              
+
+                               <div class="heading">
+                                      <h1 id="header">Our Menu</h1>
+                                       <img src="https://static.vecteezy.com/system/resources/previews/000/656/554/original/restaurant-badge-and-logo-good-for-print-vector.jpg" id="img" alt="image"> 
+                                      <hr>
+
+                               </div>
+
+                               <div class="btn-container">
+                        <!--       
+                                    <button type="button" class="btn" data-id="breakfast" >Breakfast</button>
+                                    <button type="button" class="btn" data-id="lunch" >Lunch</button> 
+                                    <button type="button" class="btn" data-id="diner" >Diner</button> -->
+
+                               </div>
+ 
+                              
+                               <div class="section-center">
+                                      <article class="menu-item">
+                                          <img src="https://images.pexels.com/photos/7837978/pexels-photo-7837978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img-1" class="menu-img">
+                                               <div class="info">  
+
+                                           <header>
+                                               <h3 class="name">Biryani</h3>
+                                               <h3 class="price">70 Ru</h3>
+                                            </header>
+                                               
+                                                <p class="menu-text">lorem hgfkduisn wkwndksnl,sm nchjdkdliyudtysiaaq</p>
+                                                </div>
+                                     </article>
+                               </div>
+
+
+                      </section>
+                </main>
+
+
+
+
+
+
+              <script>
+                     const menu = [
+  {
+    id: 1,
+    title: "Chole Bhature",
+    category: "Snacks",
+    price: "200 ₹",
+    img: "https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, <br>hammock freegan copper mug whatever cold-pressed `,
+  },
+  {
+    id: 2,
+    title: "Chiken Gravy",
+    category: "diner",
+    price: "350 ₹",
+    img: "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `vaporware iPhone mumblecore selvage raw denim slow-carb <br>leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+  },
+  {
+    id: 3,
+    title: "White Sauce Nooddles",
+    category: "diner",
+    price: "150 ₹",
+    img: "https://images.pexels.com/photos/724294/pexels-photo-724294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth<br> before they sold out organic viral.`,
+  },
+  {
+    id: 4,
+    title: "Corn Spice",
+    category: "breakfast",
+    price: "200 ₹",
+    img: "https://images.pexels.com/photos/2532005/pexels-photo-2532005.jpeg",
+    desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch.<br> Prism austin mlkshk truffaut, `,
+  },
+  {
+    id: 5,
+    title: "Aloo Paratha",
+    category: "Snacks",
+    price: "150 ₹",
+    img: "https://images.pexels.com/photos/1117862/pexels-photo-1117862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation<br>farm-to-table 90's pop-up `,
+  },
+  {
+    id: 6,
+    title: "Biryani",
+    category: "diner",
+    price: "70 ₹",
+    img: "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `Portland chicharrones ethical edison bulb, palo santo craft<br> beer chia heirloom iPhone everyday`,
+  },
+  {
+    id: 7,
+    title: "Indian Red Dauce Pasta",
+    category: "breakfast",
+    price: "250 Ru",
+    img: "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge,<br>pork belly cloud bread iceland put a bird `,
+  },
+  {
+    id: 8,
+    title: "Indian classic",
+    category: "lunch",
+    price: `300 ₹`,
+    img: "https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `on it tumblr kickstarter thundercats migas everyday carry squid <br>palo santo leggings. Food truck truffaut  `,
+  },
+  {
+    id: 9,
+    title: "Chiken Tandoori",
+    category: "diner",
+    price: "350 ₹",
+    img: "https://images.pexels.com/photos/2611917/pexels-photo-2611917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, <br>edison bulb yuccie crucifix microdosing.`,
+  },
+
+
+  {
+    id: 10,
+    title: "Chiken",
+    category: "diner",
+    price: "350 ₹",
+    img: "https://images.pexels.com/photos/4083580/pexels-photo-4083580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, <br>edison bulb yuccie crucifix microdosing.`,
+  },
+
+ 
+];
+
+   const sectionCenter=document.querySelector(".section-center");
+   const container = document.querySelector(".btn-container");
+   const header=document.querySelector("#header");
+
+
+
+
+
+
+
+  window.addEventListener('DOMContentLoaded',function(){
+           header.style.fontSize="45px"; 
+               
+           displayMenuItems(menu);
+           displayMenuButtons();
+
+       });
+
+
+ 
+
+
+    function displayMenuItems (menu){
+                    let displayMenu= menu.map(function(item){
+                       
+
+                        return `<article class="menu-item">
+                                          <img src= ${item.img} alt="${item.title}" class="menu-img">
+                                               <div class="info">  
+
+                                           <header>
+                                               <h3 class="name">${item.title}</h3>
+                                               <h3 class="price">${item.price}</h3>
+                                               <hr>
+                                            </header>
+                                                
+                                                <p class="menu-text">${item.desc}</p>
+                                                </div>
+                                     </article>`;                                 
+
+
+                                  });
+                    displayMenu=displayMenu.join("");
+                    sectionCenter.innerHTML= displayMenu;
+
+                      }
+                       
+
+                function displayMenuButtons(){
+
+                   const categories=menu.reduce(function (values,item){
+                 if(!values.includes(item.category)){
+                        values.push(item.category);
+                  }
+            return values;      
+          
+
+  },['all']);
+            const categoryBtns=categories.map(function(category){
+                      
+                     return`<button type="button" class="btn" data-id=${category}>${category}</button>`
+
+
+
+              }).join('');
+               container.innerHTML=categoryBtns;
+               const buttons=document.querySelectorAll(".btn");
+
+
+                buttons.forEach(function(button){
+                button.addEventListener("click",function(e){
+
+                         const category=e.currentTarget.dataset.id;
+
+                          const menuCategory=menu.filter(function(menuItem){
+                               
+
+                                if (menuItem.category===category){
+                                return menuItem;
+                                          }
+
+                              
+                           });
+                   
+                                   if(category==='all'){
+                                      return displayMenuItems(menu);}
+                                   
+                                    else{
+                                         return displayMenuItems(menuCategory);
+                                          }
+
+
+              });
+
+
+ });   
+
+
+
+
+           }
+
+
+             </script>
+
+
+      </body>
+
+
+
+
+
+
+
+
+
+</html>

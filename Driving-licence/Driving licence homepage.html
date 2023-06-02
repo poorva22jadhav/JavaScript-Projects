@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+       <head>
+            <title>Driving Licence Homepage</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <link
+          rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+
+             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+        
+          <style>
+               *{
+                  margin:0;
+                  padding:0;}
+
+               .black-header{
+                   height:7vh;
+                   width:100%;
+                   background:black;}
+
+
+               .black-header>p{
+                           text-align:center;
+                           color:white;
+                           font-family:georgia;
+                           font-weight:bold;
+                           transform:translateY(10px);
+                           font-size:20px;
+                     }
+
+                .black-header>p>a{
+                            
+                            color:white;
+                            }
+
+               .black-header p a:hover{
+                             color:grey;}
+                
+
+              
+            
+               
+                .white-header{
+                      display:grid;
+                      grid-template-columns:1fr 1fr 1fr;
+                      box-shadow:5px 5px 15px rgba(0,0,0);
+                      z-index:1;
+                      position:relative;}
+
+               .nav-items, .social-icons{
+                      display:flex;
+                      align-items:center;
+                     
+                      }
+                      
+ 
+
+                
+
+                .nav-items{
+                      list-style-type:none;}
+
+               .nav-items a{
+                       color:black;
+                       padding:10px;
+                       text-decoration:transparent;
+                       font-family:georgia;
+                        font-weight:bold;
+                      
+                       }
+
+               .nav-items a:hover{
+                        color:grey;
+                                 }
+
+
+                  #logo{
+                      width:70px;
+                      height:70px;
+                      border:50%;}
+
+                .social-icons a{
+                         color:black;
+                         padding:10px;
+                         font-size:20px;
+                         transition:font-size 0.2s;
+                         
+                       }   
+       
+                .social-icons a:hover{
+                          color:grey;
+                          font-size:30px;}
+
+               
+
+
+                  .img-container img{
+                           width:100%;
+                           height:90vh;
+                           display:block;
+                           margin:0;
+                           padding:0;
+                           background-size:cover;}
+
+
+                 .img-container{
+                           position:relative;
+                           text-align:center;
+                           color:white;}
+
+                  .centered{
+                           position:absolute;
+                           top: 40%;
+                           left: 50%;
+                           transform: translate(-350px,-150px);
+                           font-size:50px;
+                           font-family:georgia;
+                           z-index:1;
+                           }
+
+               
+
+                   .overlay{
+                                   position:absolute;
+                                   top:115px;
+                                   left:0;
+                                   width:100%;
+                                   height:90vh;
+                                   background-color:rgba(0,0,0,0.4); }
+
+
+
+
+                  .previous{
+                            padding:10px;
+                            background:transparent;
+                            border:transparent;
+                            transform:translateY(-400px);
+                             position:absolute;
+                             left:0;
+                             cursor:pointer;
+                             font-size:30px;
+                               color:white;
+                              transition:font-size 0.2s;
+                            z-index:111;
+                             
+                            }
+
+                  .after{ 
+                          cursor:pointer;
+                          font-size:30px;
+                          color:white;
+                          padding:10px;
+                          position:absolute;
+                          right:0;
+                          transform:translateY(-400px);
+                          background:transparent;
+                          border:transparent;
+                          transition:font-size 0.2s;
+                           z-index:1;
+                          }
+
+
+               .previous:hover, .after:hover{
+                           color:grey;
+                           font-size:40px;}
+
+               
+
+                .learn{
+                        position:absolute;
+                        z-index:1;
+                        background:linear-gradient(rgba(0,0,0),rgba(210,210,210,0.8));
+                        border:transparent;
+                        font-weight:bold;
+                        opacity:0.6;
+                        color:white;
+                        font-size:15px;
+                        padding:10px;
+                         transform:translate(650px,-300px);
+                        transition:font-size 0.2s;
+                         
+                         }
+
+                .learn a{
+                          color:white;
+                           text-decoration:none;}
+
+             .learn:hover{
+                         color:white;
+                         font-size:18px;}
+
+
+
+
+
+         </style>
+       </head>
+
+
+      <body>
+          <main>
+            <section>
+                <div class="nav-header">              <!--https://th.bing.com/th/id/OIP.DBVZg3qX5uc0msplce0MNwHaHa?pid=ImgDet&w=512&h=512&rs=1=-->
+                    <div class="black-header">
+
+                        <p>For more Information visit our<a href="https://www.ahen.com" target="_blank"> Website</a></p>
+
+                   </div>
+                   
+                   <div class="white-header">
+                         <img src="https://th.bing.com/th/id/OIP.Vc3sFpggkGJSUwy0yjEWvAAAAA?pid=ImgDet&w=300&h=300&rs=1" alt="logo-error" id="logo">
+                         
+                         <ul class="nav-items">
+                              <li><a href="#home" target="_blank">HOME</a></li>
+                              <li><a href="QandA.html" target="_blank">FAQ</a></li>
+                           
+                              <li><a href="contact-us.html" target="_blank">CONTACT-US</a></li>
+
+                         </ul>
+
+
+                       <div class="social-icons">
+                         <a href="#cloud"><i class="fas fa-cloud"></i></a>
+                        <a href="#heart"><i class="fas fa-heart"></i></a>
+                         <a href="#car"><i class="fas fa-car"></i></a>
+                        <a href="#bars"><i class="fas fa-bars"></i></a>
+
+                      <div>
+
+
+                    </div>
+                </div>
+
+                        </section>
+                 <section class="back-image">
+                     <div class="img-container">
+                          <img src="https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="img-1">
+                   
+                          <h1 id="Text" class="centered">DRIVE RIGHT,DRIVE SAFE</h1>
+
+                       </div>
+
+                       <button class="previous"> <i class="fas fa-chevron-left"></i></button>
+                      <button class="after"> <i class="fas fa-chevron-right"></i></button>
+
+
+                        <button class="learn"><a href="courses.html" target="_blank">Learn More</button>
+
+                     <div class="overlay"></div> 
+
+                                                       
+               </section>
+
+
+
+           </main>
+
+
+
+          <script>
+
+                           
+
+
+
+
+
+
+
+                    const change=[
+                                   {
+                                      id:1,
+                                      image:"https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                      text:"DRIVE RIGHT,DRIVE SAFE",
+                                    },
+                                    
+                                   {
+                                      id:2,
+                                      image:"https://images.pexels.com/photos/3200058/pexels-photo-3200058.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                      text:"Take care of your car in garage and it will take care of you on the road",
+                                    },
+
+
+                                   
+
+
+                                    {
+                                      id:3,
+                                      image:"https://images.pexels.com/photos/2608372/pexels-photo-2608372.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+                                      text:"Life is like driving, stay in your own lane.",
+                                    },
+                                          ];
+
+
+                const img = document.querySelector("#img-1");
+                const quotes=document.querySelector("#Text");
+                const prev=document.querySelector(".previous");
+                const after=document.querySelector(".after");
+
+
+                          console.log(img);
+                         console.log(quotes);
+                           
+                                        
+                                      let currentItem=0;
+
+                           function changeImage(currentItem){
+                                        img.src=change[currentItem].image;
+                                        quotes.textContent=change[currentItem].text;
+
+                                   }
+
+
+                             after.addEventListener("click",function(){
+                                             
+                                             currentItem++;
+                                                      if(currentItem > change.length-1){
+                                                             currentItem=0;
+                                                        }
+
+                                                     
+                                             changeImage(currentItem);
+
+
+
+                                        });
+
+
+                             prev.addEventListener("click",function(){
+                                             
+                                             currentItem--;
+
+
+                                               if(currentItem < 0){
+ 
+                                                       currentItem=change.length-1;
+
+                                                                   }
+                                             changeImage(currentItem);
+
+
+
+                                        });
+
+
+
+
+
+
+
+                                   
+
+
+
+
+
+       </script>
+
+     </body>
+
+
+
+
+</html>

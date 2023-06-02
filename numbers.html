@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+            <title>Numbers</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+
+
+
+            <style>
+
+                  body{
+                       display:grid;
+                       place-items:center;}
+
+
+
+                   article{
+                         width:800px;
+                         height:150px;
+                         background-color:rgba(170,170,170,0.5);
+                         border-radius:10px;
+                         margin:10px;
+                         display:grid;
+                         place-items:flex-start;
+                         border-bottom:5px solid yellow;
+                         padding:10px;}
+
+                  article:nth-of-type(2){
+                          border-bottom:5px solid blue;
+                                         }
+
+                 article:nth-of-type(3){
+                          border-bottom:5px solid purple;
+                                         }
+
+
+                   
+
+
+                   span{
+                         font-size:60px;}
+
+                   .text{
+                          font-size:30px;}
+
+
+             
+
+
+
+
+            </style>
+
+
+      </head>
+      
+      <body>
+          
+         <section>
+             <article>
+
+                <span class="number" data-id="500">0</span>
+
+                 <p class="text">Succeeded Projects</p>
+
+            </article>
+
+             <article>
+
+                <span class="number" data-id="17140">0</span>
+
+                 <p class="text">Working Hours Spent</p>
+
+            </article>
+
+            <article>
+
+                <span class="number" data-id="1500">0</span>
+
+                 <p class="text">Our Happy Customers</p>
+
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+        </section>  
+
+        <script>
+
+
+               const items=[...document.querySelectorAll(".number")];
+               console.log(items);
+
+              const updateCount=(el)=>{
+
+                   const value= parseInt(el.dataset.id);
+                   const increment = Math.ceil(value/400);
+                  //const increment = 1;
+                   let initialValue=0;
+
+
+
+                   const increaseCount = setInterval(()=>{
+                           initialValue=initialValue+increment;
+
+
+                          if(initialValue>value){
+                              el.textContent=`${value}+`;
+                               clearInterval(increaseCount);
+                             return;
+                        }  
+
+
+
+                           el.textContent=`${initialValue}+`;
+                                              },1);
+                                                       };
+
+               items.forEach((item)=>{
+                    updateCount(item);
+                             });
+
+
+
+
+       </script>
+
+
+      </body>
+
+</html>

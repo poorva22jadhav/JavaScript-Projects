@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <link
+          rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          />
+         <style>
+
+            @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+               
+            *,::after,::before{
+                      margin:0;
+                       padding:0;
+                      box-sizing:border-box;
+                      }
+
+               .review{
+                      
+                        
+                         
+                        }
+
+             .sub-container{
+                       width:600px;
+                       height:500px;
+                       border:1px solid black;
+                       margin-top:20px;
+                       background:white;
+                       display:grid;
+                      place-items:center;
+                      text-align:center;
+                       
+                    }
+               
+           body{
+                   line-height:1.5;
+                   background:lightgrey;}
+
+           main{
+                  display:grid;
+                  justify-items:center;}
+               
+           .title{
+                   text-align:center;
+                   font-size:30px;
+                   }
+          .underline{
+                   width:130px;
+                   height:0.20rem;
+                   background:blue;
+                   margin-left:auto;
+                   margin-right:auto;} 
+
+         #review-img{
+                height:100%; 
+                width:100%;
+                object-fit:cover;
+                border-radius:50%;
+                display:block;
+                position:relative;
+               
+
+           .img-container{
+                  width:150px;
+                  height:150px;
+                  border-radius:50%;
+                  position:relative;
+                   
+                 
+                  }
+
+            .img-container::after {
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 700;
+                 content: "\f10e";
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 width: 2.5rem;
+                  height: 2.5rem;
+                  display:grid;
+                  place-items:center;
+                  border-radius:50%;
+                   transform: translateY(20%);
+                   background: blue;
+                   color: white;
+}
+
+             .img-container::before {
+                     content: "";
+                      width: 100%;
+                        height: 100%;
+                   background: blue;
+                        position: absolute;
+                  
+                       right: -0.5rem;
+                border-radius: 50%;
+                             }
+             #author {
+                     margin-top:10px;
+                      
+                     color:black;
+                     font-family:georgia;}
+
+            #profession{
+                     margin-top:10px;
+                    
+                     color:blue;}
+ 
+
+           #info{
+                   ttransform:translateX(-200px);
+                   text-align:center; 
+                   color:black;
+                   font-size:20px;
+                   
+                   }
+         .button-container{
+                 margin:10px;}
+            
+                  
+          .prev-btn, .next-btn{
+                 padding:8px;
+                 cursor:pointer;
+                 background:transparent;
+                 color:blue;
+                 border-color:transparent;
+                 }
+
+         .prev-btn:hover,
+         .next-btn:hover{
+                background:black;
+                color:white; }
+
+               
+
+
+        .random-button{
+                 padding:6px;
+                 color:white;
+                
+                background:linear-gradient(blue,black);
+                cursor:pointer;
+                border-radius:10px;}
+
+
+        .random-button:hover{
+                  background:black;} 
+
+
+        
+
+         </style>
+   </head>
+
+   <body>
+         <main>
+                   <section class="container">
+                        <div class="title">
+                               <h1>Our Reviews</h1>
+                               <div class="underline"></div>
+                        </div>
+                    <div class="sub-container">
+                     
+                           
+                           <article class="review">
+
+                                 <div class="img-container">
+                               <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="person-1" id="review-img">
+                                    </div>
+                        
+                            <h4 id="author">Sara Jones</h4>
+                       
+                            <p id="profession">INTERN</p>
+                      
+                             <p id="info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Iusto
+            asperiores debitis incidunt, eius earum ipsam cupiditate libero?<br>
+            Iste, doloremque nihil?</p>
+                             <div class="button-container">
+                                  <button class="prev-btn">
+                                  <i class="fas fa-chevron-left"></i>
+                                  </button>
+                                  <button class="next-btn">
+                                  <i class="fas fa-chevron-right"></i>
+                                   </button>
+                             </div>
+                                   <button class="random-button">Surprise Me</button>
+
+                          <article>  
+                                
+                         </div>
+
+                   </section> 
+         </main>
+
+
+
+
+
+        <script>
+
+                       const review = [
+                                         {
+
+                                          id:1,
+                                          image:"https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                          name:"jiya Johanson",
+                                          profession:"Intern",
+                                          text:"Helvetica artisan kinfolk thundercats lumbersexual blue bottle.",
+
+                                          },
+
+                                           {
+
+                                          id:2,
+                                          image:"https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=400",
+                                          name:"jess Johanson",
+                                          profession:"Web Developer",
+                                          text:"Jelvetica artisan kinfolk thundercats lumbersexual blue bottle.",
+                                             
+                                          },
+                                               
+                                          {
+
+                                          id:3,
+                                          image:"https://images.pexels.com/photos/1844139/pexels-photo-1844139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                          name:"Tiya Mcray",
+                                          profession:"Proffesional",
+                                          text:"Bitches artisan kinfolk thundercats lumbersexual blue bottle.",
+
+                                          },
+
+                                          {
+
+                                          id:4,
+                                          image:"https://images.pexels.com/photos/2115681/pexels-photo-2115681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                          name:"Mikela Mendes",
+                                          profession:"Boss",
+                                          text:"gtui artisan kinfolk thundercats lumbersexual blue bottle.",
+
+                                          }];
+                                            
+
+                                          let currentItem=0;   
+                                         const Image=document.getElementById("review-img");
+                                         const Author=document.getElementById("author");
+                                         const job=document.getElementById("profession"); 
+                                         const Text=document.getElementById("info");
+                                         const previous=document.querySelector(".prev-btn");
+                                         const after=document.querySelector(".next-btn");
+                                         const random=document.querySelector(".random-button");
+
+
+
+
+
+                        window.addEventListener('DOMContentLoaded',function(){
+                                             showPerson(currentItem);   
+                                          
+                                  });
+
+
+
+
+                       function showPerson(currentItem){
+                                                let item=review[currentItem];
+                                              
+                                                  Image.src=item.image;
+                                                  Author.textContent=item.name;
+                                                  job.textContent=item.profession;
+                                                  Text.textContent=item.text;
+
+
+                               }
+
+
+                        after.addEventListener('click',function(){
+                                           currentItem++;
+                                          
+                                           if(currentItem > review.length-1){
+                                                    currentItem=0;
+                                           }
+
+                                           showPerson(currentItem);
+                                   });
+
+                     previous.addEventListener('click',function(){
+                                       currentItem--;
+                                      
+                                       if(currentItem < 0){
+                                                     currentItem=review.length-1;}
+
+                                        showPerson(currentItem);
+
+                                   });
+
+                                     
+
+                   random.addEventListener('click',function(){
+                                  currentItem=Math.floor(Math.random()*review.length-1);
+                                  showPerson(currentItem);
+
+                       });
+
+
+
+        </script>
+   </body>
+
+</html>
